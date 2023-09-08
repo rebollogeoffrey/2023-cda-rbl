@@ -39,3 +39,12 @@ Link : https://miro.com/app/board/uXjVMp45h-8=/?share_link_id=337527427895
 ## Bill of Specifications
 
 Link : https://docs.google.com/document/d/18bmZug18KkH1dnW0wEe41EPC1YZYI_oa/edit
+
+## Step to create the Data Base
+
+- Open the terminal
+- Connect to mysql with : mysql -u root -p
+  - Remplace root with your user
+  - You'll need to enter your password
+- Once connected, create the data base
+  - CREATE DATABASE db_rbl

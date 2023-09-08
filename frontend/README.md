@@ -68,3 +68,19 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+# Typo
+
+- kebab-case Example : this-is-an-exemple
+- snake_case Example : this_is_an_example
+- PascalCase Example : ThisIsAnExample
+- camelCase Example : thisIsAnExample
+
+## CSS
+
+All classes, variables and file's name are in kebab-case.
+
+## JS/React
+
+All classes, variables are in camelCase.
+File's name are in lowercase.
