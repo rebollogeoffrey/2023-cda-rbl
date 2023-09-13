@@ -40,4 +40,12 @@ export class User {
     unique: false,
   })
   password: string;
+
+  @Column({
+    type: 'varchar',
+    length: '255',
+    nullable: true,
+    unique: false,
+  })
+  image: string;
 }
