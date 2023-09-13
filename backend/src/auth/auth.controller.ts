@@ -1,7 +1,10 @@
-//src/auth/auth.controller.ts
-
+// Base
 import { Controller, Post, Body } from '@nestjs/common';
+
+// Service
 import { AuthService } from './auth.service';
+
+// Entity
 import { User } from '../entities/user.entity';
 
 @Controller('auth')

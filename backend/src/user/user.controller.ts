@@ -1,6 +1,4 @@
-import { User } from '../entities/user.entity';
-
-import { UserService } from './user.service';
+//Base
 import {
   Controller,
   Get,
@@ -9,12 +7,23 @@ import {
   Body,
   Put,
   Delete,
+  UseGuards,
 } from '@nestjs/common';
+
+// Service
+import { UserService } from './user.service';
+
+// Entity
+import { User } from '../entities/user.entity';
+
+// Guard
+import { AuthGuard } from '@nestjs/passport';
 
 @Controller('user')
 export class UserController {
   constructor(private readonly userService: UserService) {}
 
+  @UseGuards(AuthGuard('jwt'))
   @Get()
   getUsers() {
     return this.userService.getUsers();

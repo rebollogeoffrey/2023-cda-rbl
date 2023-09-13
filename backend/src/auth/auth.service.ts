@@ -1,9 +1,14 @@
-// src/auth/auth.service.ts
+// Base
+import { Injectable } from '@nestjs/common';
 
+// Entity
 import { User } from '../entities/user.entity';
+
+// Other Service
 import { JwtService } from '@nestjs/jwt';
 import { UserService } from './../user/user.service';
-import { Injectable } from '@nestjs/common';
+
+// Misc
 import * as crypto from 'crypto';
 
 @Injectable()

@@ -1,10 +1,15 @@
-// src/app/auth/jwt.strategy.ts
-
-import { User } from '../entities/user.entity';
-import { AuthService } from './auth.service';
+// Base
 import { ExtractJwt, Strategy } from 'passport-jwt';
 import { PassportStrategy } from '@nestjs/passport';
 import { Injectable, UnauthorizedException } from '@nestjs/common';
+
+// Other Service
+import { AuthService } from './auth.service';
+
+// Entity
+import { User } from '../entities/user.entity';
+
+// Misc
 import { jwtConstants } from './constants';
 
 @Injectable()
