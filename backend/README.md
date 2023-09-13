@@ -85,7 +85,7 @@ Theses routes are the route used in the backend to CRUD data.
 - Statistic : /statistic
 - Account Management : /account
 
-## THe Great Peasant's Quest
+## The Great Peasant's Quest
 
 - Main page : /tgpq
 - Character Selection : /tgpq/character
