@@ -3,8 +3,8 @@ import { Achievement } from './achievement.entity';
 
 @Entity()
 export class Condition {
-  @PrimaryGeneratedColumn()
-  id: number;
+  @PrimaryGeneratedColumn('uuid')
+  id: string;
 
   @Column({
     type: 'varchar',

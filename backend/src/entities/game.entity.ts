@@ -1,9 +1,10 @@
-import { Entity, Column, PrimaryGeneratedColumn } from 'typeorm';
+import { Entity, Column, PrimaryGeneratedColumn, OneToMany } from 'typeorm';
+import { Character } from './character.entity';
 
 @Entity()
 export class Game {
-  @PrimaryGeneratedColumn()
-  id: number;
+  @PrimaryGeneratedColumn('uuid')
+  id: string;
 
   @Column({
     type: 'varchar',
@@ -20,4 +21,7 @@ export class Game {
     unique: false,
   })
   description: string;
+
+  @OneToMany(() => Character, (character) => character.game)
+  characters: Character[];
 }

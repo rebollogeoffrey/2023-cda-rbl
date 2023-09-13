@@ -11,8 +11,8 @@ export enum statistic_affected {
 
 @Entity()
 export class Effet {
-  @PrimaryGeneratedColumn()
-  id: number;
+  @PrimaryGeneratedColumn('uuid')
+  id: string;
 
   @Column({
     type: 'boolean',

@@ -9,8 +9,8 @@ import { Game } from './game.entity';
 
 @Entity()
 export class Statistic {
-  @PrimaryGeneratedColumn()
-  id: number;
+  @PrimaryGeneratedColumn('uuid')
+  id: string;
 
   @Column({
     type: 'int',
