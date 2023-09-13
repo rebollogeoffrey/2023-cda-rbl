@@ -51,8 +51,8 @@ export class User {
   @Column({
     type: 'varchar',
     length: '255',
-    nullable: true,
     unique: false,
+    nullable: true,
   })
   url_image: string;
 

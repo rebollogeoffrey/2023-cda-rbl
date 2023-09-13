@@ -5,9 +5,12 @@ import {
   ManyToOne,
   JoinColumn,
   OneToOne,
+  ManyToMany,
+  JoinTable,
 } from 'typeorm';
 import { Game } from './game.entity';
 import { Monster } from './monster.entity';
+import { Item } from './item.entity';
 
 @Entity()
 export class Character {
@@ -64,4 +67,10 @@ export class Character {
   @OneToOne(() => Monster)
   @JoinColumn()
   monster: Monster;
+
+  // Hero is the join table between Item and Character
+  // Hero has no property by itself except it's id
+  @ManyToMany(() => Item)
+  @JoinTable({ name: 'Hero' })
+  items: Item[];
 }

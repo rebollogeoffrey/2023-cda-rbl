@@ -1,4 +1,11 @@
-import { Entity, Column, PrimaryGeneratedColumn } from 'typeorm';
+import {
+  Entity,
+  Column,
+  PrimaryGeneratedColumn,
+  OneToOne,
+  JoinColumn,
+} from 'typeorm';
+import { Character } from './character.entity';
 
 @Entity()
 export class Monster {
@@ -7,9 +14,21 @@ export class Monster {
 
   @Column({
     type: 'varchar',
-    length: 255,
+    length: 80,
     unique: false,
     nullable: true,
   })
-  url_image: string;
+  category: string;
+
+  @Column({
+    type: 'int',
+    unique: false,
+    nullable: false,
+    default: 1,
+  })
+  difficulty: number;
+
+  @OneToOne(() => Character)
+  @JoinColumn()
+  character: Character;
 }
