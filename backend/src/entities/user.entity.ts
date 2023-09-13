@@ -1,4 +1,11 @@
-import { Entity, Column, PrimaryGeneratedColumn } from 'typeorm';
+import {
+  Entity,
+  Column,
+  PrimaryGeneratedColumn,
+  ManyToMany,
+  JoinTable,
+} from 'typeorm';
+import { Achievement } from './achievement.entity';
 
 export enum UserRole {
   ADMIN = 'admin',
@@ -48,4 +55,8 @@ export class User {
     unique: false,
   })
   url_image: string;
+
+  @ManyToMany(() => Achievement)
+  @JoinTable({ name: 'user_achievement' })
+  achievements: Achievement[];
 }

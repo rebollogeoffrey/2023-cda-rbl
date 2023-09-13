@@ -1,5 +1,13 @@
-import { Entity, Column, PrimaryGeneratedColumn, ManyToOne } from 'typeorm';
+import {
+  Entity,
+  Column,
+  PrimaryGeneratedColumn,
+  ManyToOne,
+  JoinColumn,
+  OneToOne,
+} from 'typeorm';
 import { Game } from './game.entity';
+import { Monster } from './monster.entity';
 
 @Entity()
 export class Character {
@@ -52,4 +60,8 @@ export class Character {
 
   @ManyToOne(() => Game, (game) => game.characters)
   game: Game;
+
+  @OneToOne(() => Monster)
+  @JoinColumn()
+  monster: Monster;
 }
