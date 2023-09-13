@@ -8,6 +8,7 @@ import {
 } from 'typeorm';
 import { User } from './user.entity';
 import { Condition } from './condition.entity';
+import { Effet } from './effet.entity';
 
 @Entity()
 export class Achievement {
@@ -52,4 +53,7 @@ export class Achievement {
 
   @OneToMany(() => Condition, (condition) => condition.achievement)
   conditions: Achievement[];
+
+  @OneToMany(() => Effet, (effet) => effet.achievement)
+  effects: Effet[];
 }
