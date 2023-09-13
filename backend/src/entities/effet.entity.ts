@@ -41,6 +41,8 @@ export class Effet {
   })
   when: string;
 
-  @ManyToOne(() => Achievement, (achievement) => achievement.effects)
+  @ManyToOne(() => Achievement, (achievement) => achievement.effects, {
+    cascade: false,
+  })
   achievement: Achievement;
 }

@@ -39,9 +39,13 @@ export class Achievement {
   })
   is_owned: boolean;
 
-  @OneToMany(() => Condition, (condition) => condition.achievement)
+  @OneToMany(() => Condition, (condition) => condition.achievement, {
+    cascade: false,
+  })
   conditions: Achievement[];
 
-  @OneToMany(() => Effet, (effet) => effet.achievement)
+  @OneToMany(() => Effet, (effet) => effet.achievement, {
+    cascade: false,
+  })
   effects: Effet[];
 }

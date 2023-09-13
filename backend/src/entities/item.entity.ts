@@ -37,6 +37,8 @@ export class Item {
   })
   url_image: string;
 
-  @ManyToOne(() => Game, (game) => game.items)
+  @ManyToOne(() => Game, (game) => game.items, {
+    cascade: true,
+  })
   game: Game;
 }

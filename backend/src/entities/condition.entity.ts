@@ -29,6 +29,8 @@ export class Condition {
   })
   category: string;
 
-  @ManyToOne(() => Achievement, (achievement) => achievement.conditions)
+  @ManyToOne(() => Achievement, (achievement) => achievement.conditions, {
+    cascade: true,
+  })
   achievement: Achievement;
 }

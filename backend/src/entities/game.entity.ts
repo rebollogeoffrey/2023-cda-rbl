@@ -23,9 +23,13 @@ export class Game {
   })
   description: string;
 
-  @OneToMany(() => Character, (character) => character.game)
+  @OneToMany(() => Character, (character) => character.game, {
+    cascade: true,
+  })
   characters: Character[];
 
-  @OneToMany(() => Item, (item) => item.game)
+  @OneToMany(() => Item, (item) => item.game, {
+    cascade: false,
+  })
   items: Item[];
 }
