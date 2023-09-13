@@ -47,5 +47,5 @@ export class User {
     nullable: true,
     unique: false,
   })
-  image: string;
+  url_image: string;
 }
