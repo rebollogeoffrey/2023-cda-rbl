@@ -10,7 +10,7 @@ export enum statistic_affected {
 }
 
 @Entity()
-export class Effet {
+export class Effect {
   @PrimaryGeneratedColumn('uuid')
   id: string;
 
