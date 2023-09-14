@@ -61,22 +61,17 @@ export class Character {
   })
   url_image: string;
 
-  @ManyToOne(() => Game, (game) => game.characters, {
-    cascade: false,
-  })
-  game: Game;
+  // --------------RELATIONS
+  @ManyToOne(() => Game, (game_id) => game_id.characters_id, { cascade: false })
+  game_id: string;
 
-  @OneToOne(() => Monster, {
-    cascade: true,
-  })
+  @OneToOne(() => Monster, { cascade: true })
   @JoinColumn()
-  monster: Monster;
+  monster_id: string;
 
   // Hero is the join table between Item and Character
   // Hero has no property by itself except it's id
-  @ManyToMany(() => Item, {
-    cascade: false,
-  })
+  @ManyToMany(() => Item, { cascade: false })
   @JoinTable({ name: 'hero' })
-  items: Item[];
+  items_id: string[];
 }

@@ -1,4 +1,4 @@
-import { Entity, Column, PrimaryGeneratedColumn, ManyToOne } from 'typeorm';
+import { Entity, Column, PrimaryGeneratedColumn, OneToOne } from 'typeorm';
 import { Achievement } from './achievement.entity';
 
 @Entity()
@@ -29,8 +29,11 @@ export class Requirement {
   })
   category: string;
 
-  @ManyToOne(() => Achievement, (achievement) => achievement.requirements, {
-    cascade: true,
-  })
-  achievement: Achievement;
+  // --------------RELATIONS
+  @OneToOne(
+    () => Achievement,
+    (achievement_id) => achievement_id.requirement_id,
+    { cascade: true },
+  )
+  achievement_id: string;
 }

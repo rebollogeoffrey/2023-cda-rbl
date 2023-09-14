@@ -24,7 +24,8 @@ export class Statistic {
   })
   nb_lose: number;
 
-  @OneToOne(() => Game)
+  // --------------RELATIONS
+  @OneToOne(() => Game, { cascade: false })
   @JoinColumn()
-  game: Game;
+  game_id: string;
 }

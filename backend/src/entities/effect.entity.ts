@@ -1,4 +1,4 @@
-import { Entity, Column, PrimaryGeneratedColumn, ManyToOne } from 'typeorm';
+import { Entity, Column, PrimaryGeneratedColumn, OneToOne } from 'typeorm';
 import { Achievement } from './achievement.entity';
 
 export enum statistic_affected {
@@ -33,6 +33,7 @@ export class Effect {
   })
   value: number;
 
+  // TODO : Replace string by enum in when column
   @Column({
     type: 'varchar',
     length: 50,
@@ -41,8 +42,9 @@ export class Effect {
   })
   when: string;
 
-  @ManyToOne(() => Achievement, (achievement) => achievement.effects, {
+  // --------------RELATIONS
+  @OneToOne(() => Achievement, (achievement_id) => achievement_id.effect_id, {
     cascade: false,
   })
-  achievement: Achievement;
+  achievement_id: string;
 }

@@ -28,7 +28,8 @@ export class Monster {
   })
   difficulty: number;
 
-  @OneToOne(() => Character)
+  // --------------RELATIONS
+  @OneToOne(() => Character, { cascade: true })
   @JoinColumn()
-  character: Character;
+  character_id: string;
 }

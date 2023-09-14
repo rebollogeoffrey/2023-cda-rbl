@@ -1,6 +1,15 @@
-import { Entity, Column, PrimaryGeneratedColumn, OneToMany } from 'typeorm';
+import {
+  Entity,
+  Column,
+  PrimaryGeneratedColumn,
+  OneToMany,
+  JoinColumn,
+  OneToOne,
+} from 'typeorm';
 import { Character } from './character.entity';
 import { Item } from './item.entity';
+import { Achievement } from './achievement.entity';
+import { Statistic } from './statistic.entity';
 
 @Entity()
 export class Game {
@@ -23,13 +32,21 @@ export class Game {
   })
   description: string;
 
-  @OneToMany(() => Character, (character) => character.game, {
+  // --------------RELATIONS
+  @OneToMany(() => Character, (characters_id) => characters_id.game_id, {
     cascade: true,
   })
-  characters: Character[];
+  characters_id: string[];
 
-  @OneToMany(() => Item, (item) => item.game, {
-    cascade: false,
+  @OneToMany(() => Item, (items_id) => items_id.game_id, {
+    cascade: true,
   })
-  items: Item[];
+  items_id: string[];
+
+  @OneToMany(() => Achievement, (achievements_id) => achievements_id.game_id)
+  achievements_id: string[];
+
+  @OneToOne(() => Statistic)
+  @JoinColumn()
+  statistic_id: string;
 }

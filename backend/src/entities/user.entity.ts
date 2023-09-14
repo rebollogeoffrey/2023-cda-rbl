@@ -56,9 +56,10 @@ export class User {
   })
   url_image: string;
 
+  // --------------RELATIONS
   @ManyToMany(() => Achievement, {
     cascade: true,
   })
   @JoinTable({ name: 'user_achievement' })
-  achievements: Achievement[];
+  achievements_id: string[];
 }

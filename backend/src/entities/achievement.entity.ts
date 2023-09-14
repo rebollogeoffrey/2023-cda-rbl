@@ -1,6 +1,16 @@
-import { Entity, Column, PrimaryGeneratedColumn, OneToMany } from 'typeorm';
+import {
+  Entity,
+  Column,
+  PrimaryGeneratedColumn,
+  OneToOne,
+  ManyToMany,
+  JoinTable,
+  ManyToOne,
+} from 'typeorm';
 import { Effect } from './effect.entity';
 import { Requirement } from './requirement.entity';
+import { Game } from './game.entity';
+import { User } from './user.entity';
 
 @Entity()
 export class Achievement {
@@ -37,13 +47,27 @@ export class Achievement {
   })
   is_owned: boolean;
 
-  @OneToMany(() => Requirement, (requirement) => requirement.achievement, {
-    cascade: false,
-  })
-  requirements: Requirement[];
+  // --------------RELATIONS
+  @OneToOne(
+    () => Requirement,
+    (requirement_id) => requirement_id.achievement_id,
+    { cascade: true },
+  )
+  requirement_id: string;
 
-  @OneToMany(() => Effect, (effect) => effect.achievement, {
+  @OneToOne(() => Effect, (effet_id) => effet_id.achievement_id, {
+    cascade: true,
+  })
+  effect_id: string;
+
+  @ManyToOne(() => Game, (game_id) => game_id.achievements_id, {
     cascade: false,
   })
-  effects: Effect[];
+  game_id: string;
+
+  @ManyToMany(() => User, {
+    cascade: false,
+  })
+  @JoinTable({ name: 'user_achievement' })
+  users_id: string[];
 }
