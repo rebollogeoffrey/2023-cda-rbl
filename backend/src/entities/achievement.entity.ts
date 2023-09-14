@@ -1,13 +1,6 @@
-import {
-  Entity,
-  Column,
-  PrimaryGeneratedColumn,
-  ManyToMany,
-  JoinTable,
-  OneToMany,
-} from 'typeorm';
-import { User } from './user.entity';
+import { Entity, Column, PrimaryGeneratedColumn, OneToMany } from 'typeorm';
 import { Condition } from './condition.entity';
+import { Effet } from './effet.entity';
 
 @Entity()
 export class Achievement {
@@ -46,10 +39,13 @@ export class Achievement {
   })
   is_owned: boolean;
 
-  @ManyToMany(() => User)
-  @JoinTable()
-  users: User[];
-
-  @OneToMany(() => Condition, (condition) => condition.achievement)
+  @OneToMany(() => Condition, (condition) => condition.achievement, {
+    cascade: false,
+  })
   conditions: Achievement[];
+
+  @OneToMany(() => Effet, (effet) => effet.achievement, {
+    cascade: false,
+  })
+  effects: Effet[];
 }

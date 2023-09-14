@@ -1,36 +1,44 @@
 import { Entity, Column, PrimaryGeneratedColumn, ManyToOne } from 'typeorm';
-import { Achievement } from './achievement.entity';
+import { Game } from './game.entity';
 
 @Entity()
-export class Condition {
+export class Item {
   @PrimaryGeneratedColumn('uuid')
   id: string;
 
   @Column({
     type: 'varchar',
-    length: 50,
+    length: 80,
     nullable: false,
     unique: false,
   })
-  verb: string;
+  name: string;
 
   @Column({
     type: 'int',
     unique: false,
     nullable: false,
   })
-  counter: number;
+  price: number;
 
   @Column({
     type: 'varchar',
-    length: 80,
+    length: 255,
     unique: false,
     nullable: true,
   })
-  category: string;
+  effect: string;
 
-  @ManyToOne(() => Achievement, (achievement) => achievement.conditions, {
+  @Column({
+    type: 'varchar',
+    length: 255,
+    unique: false,
+    nullable: true,
+  })
+  url_image: string;
+
+  @ManyToOne(() => Game, (game) => game.items, {
     cascade: true,
   })
-  achievement: Achievement;
+  game: Game;
 }
