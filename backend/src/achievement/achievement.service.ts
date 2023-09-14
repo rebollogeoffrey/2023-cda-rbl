@@ -12,7 +12,7 @@ import { Achievement } from '../entities/achievement.entity';
 export class AchievementService {
   constructor(
     @InjectRepository(Achievement)
-    private achievementsRepository: Repository<Achievement>,
+    private achievementsRepository: Repository<Achievement>, // private userachRepository: Repository<user_
   ) {}
 
   async getAchievements(): Promise<Achievement[]> {
@@ -40,11 +40,13 @@ export class AchievementService {
     return this.achievementsRepository.find({
       join: { alias: 'roles', innerJoin: { users: 'roles.users' } },
       where: (qb) => {
-        qb.where({
-          // Filter Role fields
-          a: 1,
-          b: 2,
-        }).andWhere('users.name = :userName', { userName: 'John Doe' }); // Filter related field
+        return qb
+          .where({
+            // Filter Role fields
+            a: 1,
+            b: 2,
+          })
+          .andWhere('users.name = :userName', { userName: 'John Doe' }); // Filter related field
       },
     });
   }

@@ -36,4 +36,10 @@ export class UserService {
   deleteUser(user: User): void {
     return this.userRepository.delete(user) as unknown as void;
   }
+
+  test(){
+    return this.userRepository.find({
+      select:[{ 'user_achievement'}]
+    })
+  }
 }
