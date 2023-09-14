@@ -13,6 +13,7 @@ import { AppService } from './app.service';
 // Other Modules
 import { UserModule } from './user/user.module';
 import { AuthModule } from './auth/auth.module';
+import { AchievementModule } from './achievement/achievement.module';
 
 @Module({
   imports: [
@@ -22,6 +23,7 @@ import { AuthModule } from './auth/auth.module';
       imports: [ConfigModule],
       useFactory: () => databaseConfig,
     }),
+    AchievementModule,
   ],
   controllers: [AppController],
   providers: [AppService],
