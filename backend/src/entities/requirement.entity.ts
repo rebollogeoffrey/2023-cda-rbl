@@ -2,7 +2,7 @@ import { Entity, Column, PrimaryGeneratedColumn, ManyToOne } from 'typeorm';
 import { Achievement } from './achievement.entity';
 
 @Entity()
-export class Condition {
+export class Requirement {
   @PrimaryGeneratedColumn('uuid')
   id: string;
 
@@ -29,7 +29,7 @@ export class Condition {
   })
   category: string;
 
-  @ManyToOne(() => Achievement, (achievement) => achievement.conditions, {
+  @ManyToOne(() => Achievement, (achievement) => achievement.requirements, {
     cascade: true,
   })
   achievement: Achievement;

@@ -77,6 +77,6 @@ export class Character {
   @ManyToMany(() => Item, {
     cascade: false,
   })
-  @JoinTable({ name: 'Hero' })
+  @JoinTable({ name: 'hero' })
   items: Item[];
 }

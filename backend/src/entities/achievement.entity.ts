@@ -1,6 +1,6 @@
 import { Entity, Column, PrimaryGeneratedColumn, OneToMany } from 'typeorm';
-import { Condition } from './condition.entity';
 import { Effect } from './effect.entity';
+import { Requirement } from './requirement.entity';
 
 @Entity()
 export class Achievement {
@@ -37,10 +37,10 @@ export class Achievement {
   })
   is_owned: boolean;
 
-  @OneToMany(() => Condition, (condition) => condition.achievement, {
+  @OneToMany(() => Requirement, (requirement) => requirement.achievement, {
     cascade: false,
   })
-  conditions: Condition[];
+  requirements: Requirement[];
 
   @OneToMany(() => Effect, (effect) => effect.achievement, {
     cascade: false,
