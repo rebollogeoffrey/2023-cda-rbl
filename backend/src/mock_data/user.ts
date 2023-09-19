@@ -1,9 +1,9 @@
-import { UserRole } from 'src/entities/user.entity';
+import { UserRole } from '../entities/user.entity';
 
 export const valuesUser = [
   {
     id: '5c0eda5f-306d-4a6e-8f7a-6b3bf841420b',
-    name: 'Systenotheca vortriedei (Brandegee) Reveal & Hardham',
+    name: 'Systenotheca ',
     email: 'apace0@constantcontact.com',
     password: '$2a$04$DWC1OfQqISD5H2H/xmNQK.N/088kw09Jtr07ZD1NHQP1lKNoL0M5u',
     url_image:
@@ -12,7 +12,7 @@ export const valuesUser = [
   },
   {
     id: 'c90e1467-a6d7-4a75-a544-c86a0e29e7a2',
-    name: 'Commelina nigritana Benth. var. gambiae (C.B. Clarke) Brenan',
+    name: 'Commelina nigritana',
     email: 'kodowling1@geocities.com',
     password: '$2a$04$7TsjWX5GxNbcKpwoFJPIueFozoZEfkIY9eTZDPxT572bjHzWu5F0K',
     url_image: 'https://robohash.org/veroomnisearum.png?size=50x50&set=set1',
@@ -37,7 +37,7 @@ export const valuesUser = [
   },
   {
     id: '1d8fb26a-d64e-4071-992b-88e17500e702',
-    name: 'Cylindropuntia californica (Torr. & A. Gray) F.M. Knuth var. californica',
+    name: 'Cylindropuntia  a',
     email: 'lsimkovich4@netscape.com',
     password: '$2a$04$GgpkLrhpYNqi9x1WVDhobODsq0tLBmizcaPliw8RADCWKCoyS1YVC',
     url_image: 'https://robohash.org/estseddolorem.png?size=50x50&set=set1',
@@ -45,7 +45,7 @@ export const valuesUser = [
   },
   {
     id: 'f1745982-10c3-49cd-a693-bfa46590add3',
-    name: 'Ocotea wrightii (Meisn.) Mez',
+    name: 'Ocotea wrightii',
     email: 'mguerriero5@w3.org',
     password: '$2a$04$SWSYdN19DT3/.OchEBAjxu/xdNK5cA.DEJcUig6Tnm7x1sW4q0Yxe',
     url_image: 'https://robohash.org/natusporroharum.png?size=50x50&set=set1',
@@ -53,7 +53,7 @@ export const valuesUser = [
   },
   {
     id: 'f7598837-8b16-4b5f-aebd-b9b06fb1d908',
-    name: 'Erysimum asperum (Nutt.) DC.',
+    name: 'Erysimum asperum .',
     email: 'okennea6@issuu.com',
     password: '$2a$04$KZUhgSGPTDTQv.Rf0Zswk.G8o6qWbnnC7mnJh8mzdlENly1ffY58K',
     url_image: 'https://robohash.org/quolaboriosamsunt.png?size=50x50&set=set1',
@@ -61,7 +61,7 @@ export const valuesUser = [
   },
   {
     id: '68084b00-8716-466b-89e9-f2dd33502d4c',
-    name: 'Viola septentrionalis Greene',
+    name: 'Viola septentrionalis ',
     email: 'mouldcott7@purevolume.com',
     password: '$2a$04$gZX99XwPkWFXbuAHNLO7ke2cUCxfPmQ0ccABBfOIQnYE8Bilrfhhi',
     url_image:
@@ -70,7 +70,7 @@ export const valuesUser = [
   },
   {
     id: 'beb65846-1c8e-46a0-aaf8-478076a6bee0',
-    name: 'Talinum paniculatum (Jacq.) Gaertn.',
+    name: 'Talinum paniculatum .',
     email: 'mchaman8@plala.or.jp',
     password: '$2a$04$MZ0J7y93yLvexoivqpV2Ge9c7FVgb/FYYqbXv8N7iX.FeRUnR7462',
     url_image:
@@ -88,7 +88,7 @@ export const valuesUser = [
   },
   {
     id: 'e7717526-d751-4154-835f-c2d0f94918a8',
-    name: 'Mimulus bigelovii (A. Gray) A. Gray',
+    name: 'Mimulus bigelovii ',
     email: 'gschreia@yellowpages.com',
     password: '$2a$04$QW/iJ0w4auaMtWRgZh79leJNBqxlTOjlfj7gHdqsR7aNOvd4K.93S',
     url_image: 'https://robohash.org/sedpossimuset.png?size=50x50&set=set1',
@@ -96,7 +96,7 @@ export const valuesUser = [
   },
   {
     id: '1de20a9c-4b1a-4878-8cdd-2a3bc5f39f2d',
-    name: 'Bidens menziesii (A. Gray) Sherff',
+    name: 'Bidens menziesii',
     email: 'kbiasib@creativecommons.org',
     password: '$2a$04$0ryjhBQhvW4hOKhAY/KMku7g1MX3fYJsCHOCNM2V26SQ2./QU6JbO',
     url_image: 'https://robohash.org/ullameain.png?size=50x50&set=set1',
@@ -112,7 +112,7 @@ export const valuesUser = [
   },
   {
     id: '0e2a94c3-b2e1-4635-b43a-5556201b7737',
-    name: 'Bouteloua ramosa Scribn. ex Vasey',
+    name: 'Bouteloua ramosa',
     email: 'damard@opensource.org',
     password: '$2a$04$XpHks9u5.mJBgw/guNcuaufL7EEtCPpcXrazeSHvG1W4Ar3GsrKYa',
     url_image:
@@ -154,7 +154,7 @@ export const valuesUser = [
   },
   {
     id: '6d7de723-3fca-45b4-a31d-53feda084438',
-    name: 'Cyrtandra paludosa Gaudich. var. paludosa',
+    name: 'Psorothamnus thompsoniae',
     email: 'dpresshaughi@globo.com',
     password: '$2a$04$hTlzK02ecR1eqzoWGEnpqu0WikTtOsz38XqDxYXqwNKXBak9bEFTi',
     url_image:
@@ -163,7 +163,7 @@ export const valuesUser = [
   },
   {
     id: '34385027-7354-4fb0-bbe8-848c58903cde',
-    name: 'Psorothamnus thompsoniae (Vail) S.L. Welsh & N.D. Atwood var. whitingii (Kearney & Peebles) Barneby',
+    name: 'Psorothamnus thompsoniae',
     email: 'jperrottj@a8.net',
     password: '$2a$04$dg0.oDBEc0M2Fh2WD7Bt3Ox2Bb0sbvkI1v0lWlYIjTLOnf6oCcSoi',
     url_image:

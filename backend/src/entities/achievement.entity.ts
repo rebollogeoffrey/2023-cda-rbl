@@ -40,10 +40,10 @@ export class Achievement {
   @OneToMany(() => Requirement, (requirement) => requirement.achievement, {
     cascade: false,
   })
-  requirements: Requirement[];
+  requirements_id: string[];
 
   @OneToMany(() => Effect, (effect) => effect.achievement, {
     cascade: false,
   })
-  effects: Effect[];
+  effects_id: string[];
 }

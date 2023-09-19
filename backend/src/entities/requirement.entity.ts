@@ -29,7 +29,7 @@ export class Requirement {
   })
   category: string;
 
-  @ManyToOne(() => Achievement, (achievement) => achievement.requirements, {
+  @ManyToOne(() => Achievement, (achievement) => achievement.requirements_id, {
     cascade: true,
   })
   achievement: Achievement;
