@@ -1,5 +1,5 @@
 import { Entity, Column, PrimaryGeneratedColumn, OneToOne } from 'typeorm';
-import { Achievement } from './achievement.entity';
+import { Achievement } from '../../achievement/entities/achievement.entity';
 
 @Entity()
 export class Requirement {

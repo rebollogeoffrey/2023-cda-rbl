@@ -8,9 +8,9 @@ import {
   ManyToMany,
   JoinTable,
 } from 'typeorm';
-import { Game } from './game.entity';
-import { Monster } from './monster.entity';
-import { Item } from './item.entity';
+import { Game } from '../../game/entities/game.entity';
+import { Monster } from '../../monster/entities/monster.entity';
+import { Item } from '../../item/entities/item.entity';
 
 @Entity()
 export class Character {

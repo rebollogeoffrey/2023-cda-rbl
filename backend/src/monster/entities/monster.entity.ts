@@ -5,7 +5,7 @@ import {
   OneToOne,
   JoinColumn,
 } from 'typeorm';
-import { Character } from './character.entity';
+import { Character } from '../../character/entities/character.entity';
 
 @Entity()
 export class Monster {

@@ -5,7 +5,7 @@ import {
   OneToOne,
   JoinColumn,
 } from 'typeorm';
-import { Game } from './game.entity';
+import { Game } from '../../game/entities/game.entity';
 
 @Entity()
 export class Statistic {
