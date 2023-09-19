@@ -6,10 +6,10 @@ import {
   JoinColumn,
   OneToOne,
 } from 'typeorm';
-import { Character } from './character.entity';
-import { Item } from './item.entity';
-import { Achievement } from './achievement.entity';
-import { Statistic } from './statistic.entity';
+import { Character } from '../../character/entities/character.entity';
+import { Item } from '../../item/entities/item.entity';
+import { Achievement } from '../../achievement/entities/achievement.entity';
+import { Statistic } from '../../statistic/entities/statistic.entity';
 
 @Entity()
 export class Game {

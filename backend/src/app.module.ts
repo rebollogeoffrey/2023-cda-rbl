@@ -2,6 +2,9 @@ import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { TypeOrmModule } from '@nestjs/typeorm';
+import { UserModule } from './user/user.module';
+import { AchievementModule } from './achievement/achievement.module';
+import { GameModule } from './game/game.module';
 
 @Module({
   imports: [
@@ -15,6 +18,9 @@ import { TypeOrmModule } from '@nestjs/typeorm';
       entities: [],
       synchronize: false,
     }),
+    UserModule,
+    AchievementModule,
+    GameModule,
   ],
   controllers: [AppController],
   providers: [AppService],

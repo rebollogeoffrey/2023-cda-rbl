@@ -7,10 +7,10 @@ import {
   JoinTable,
   ManyToOne,
 } from 'typeorm';
-import { Effect } from './effect.entity';
-import { Requirement } from './requirement.entity';
-import { Game } from './game.entity';
-import { User } from './user.entity';
+import { Effect } from '../../effect/entities/effect.entity';
+import { Requirement } from '../../requirement/entities/requirement.entity';
+import { Game } from '../../game/entities/game.entity';
+import { User } from '../../user/entities/user.entity';
 
 @Entity()
 export class Achievement {

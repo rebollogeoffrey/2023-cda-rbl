@@ -5,7 +5,7 @@ import {
   ManyToMany,
   JoinTable,
 } from 'typeorm';
-import { Achievement } from './achievement.entity';
+import { Achievement } from '../../achievement/entities/achievement.entity';
 
 export enum UserRole {
   ADMIN = 'admin',
