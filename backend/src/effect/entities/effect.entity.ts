@@ -1,5 +1,14 @@
-import { Entity, Column, PrimaryGeneratedColumn, OneToOne } from 'typeorm';
+import {
+  Entity,
+  Column,
+  PrimaryGeneratedColumn,
+  OneToOne,
+  OneToMany,
+  CreateDateColumn,
+  UpdateDateColumn,
+} from 'typeorm';
 import { Achievement } from '../../achievement/entities/achievement.entity';
+import { Item } from 'src/item/entities/item.entity';
 
 export enum statistic_affected {
   GOLD = 'gold',
@@ -42,9 +51,26 @@ export class Effect {
   })
   when: string;
 
+  // --------------TIMESTAMPS
+  @CreateDateColumn({
+    type: 'timestamp',
+    default: () => 'CURRENT_TIMESTAMP(6)',
+  })
+  created_at: Date;
+
+  @UpdateDateColumn({
+    type: 'timestamp',
+    default: () => 'CURRENT_TIMESTAMP(6)',
+    onUpdate: 'CURRENT_TIMESTAMP(6)',
+  })
+  updated_at: Date;
+
   // --------------RELATIONS
   @OneToOne(() => Achievement, (achievement_id) => achievement_id.effect_id, {
     cascade: false,
   })
   achievement_id: string;
+
+  @OneToMany(() => Item, (items_id) => items_id.effect_id)
+  items_id: [string];
 }

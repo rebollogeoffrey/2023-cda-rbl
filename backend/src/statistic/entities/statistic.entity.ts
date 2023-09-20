@@ -4,6 +4,8 @@ import {
   PrimaryGeneratedColumn,
   OneToOne,
   JoinColumn,
+  UpdateDateColumn,
+  CreateDateColumn,
 } from 'typeorm';
 import { Game } from '../../game/entities/game.entity';
 
@@ -23,6 +25,20 @@ export class Statistic {
     nullable: false,
   })
   nb_lose: number;
+
+  // --------------TIMESTAMPS
+  @CreateDateColumn({
+    type: 'timestamp',
+    default: () => 'CURRENT_TIMESTAMP(6)',
+  })
+  created_at: Date;
+
+  @UpdateDateColumn({
+    type: 'timestamp',
+    default: () => 'CURRENT_TIMESTAMP(6)',
+    onUpdate: 'CURRENT_TIMESTAMP(6)',
+  })
+  updated_at: Date;
 
   // --------------RELATIONS
   @OneToOne(() => Game, { cascade: false })

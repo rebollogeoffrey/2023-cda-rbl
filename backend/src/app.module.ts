@@ -11,6 +11,7 @@ import { ItemModule } from './item/item.module';
 import { EffectModule } from './effect/effect.module';
 import { RequirementModule } from './requirement/requirement.module';
 import { StatisticModule } from './statistic/statistic.module';
+import { CategoryModule } from './category/category.module';
 
 @Module({
   imports: [
@@ -33,6 +34,7 @@ import { StatisticModule } from './statistic/statistic.module';
     EffectModule,
     RequirementModule,
     StatisticModule,
+    CategoryModule,
   ],
   controllers: [AppController],
   providers: [AppService],
