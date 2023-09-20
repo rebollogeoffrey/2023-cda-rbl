@@ -20,6 +20,7 @@ import { valuesGame } from './game';
 import { valuesItem } from './item';
 import { valuesCharacter } from './character';
 import { valuesMonster } from './monster';
+// import { valuesCategory } from './category';
 
 export class MockData1694681037113 {
   public async up(): Promise<void> {
