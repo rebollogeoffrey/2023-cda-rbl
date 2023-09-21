@@ -1,5 +1,5 @@
-import { Category } from 'src/category/entities/category.entity';
-import { Statistic } from 'src/statistic/entities/statistic.entity';
+import { Category } from '../../category/entities/category.entity';
+import { Statistic } from '../../statistic/entities/statistic.entity';
 import {
   Column,
   CreateDateColumn,

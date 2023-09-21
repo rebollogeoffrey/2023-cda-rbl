@@ -9,8 +9,8 @@ import {
   ManyToOne,
 } from 'typeorm';
 import { Achievement } from '../../achievement/entities/achievement.entity';
-import { Item } from 'src/item/entities/item.entity';
-import { Category } from 'src/category/entities/category.entity';
+import { Item } from '../../item/entities/item.entity';
+import { Category } from '../../category/entities/category.entity';
 
 export enum statistic_affected {
   GOLD = 'gold',

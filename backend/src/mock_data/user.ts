@@ -1,4 +1,4 @@
-import { UserRole } from '../entities/user.entity';
+import { UserRole } from '../user/entities/user.entity';
 
 export const valuesUser = [
   {

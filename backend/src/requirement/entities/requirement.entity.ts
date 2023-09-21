@@ -8,7 +8,7 @@ import {
   ManyToOne,
 } from 'typeorm';
 import { Achievement } from '../../achievement/entities/achievement.entity';
-import { Category } from 'src/category/entities/category.entity';
+import { Category } from '../../category/entities/category.entity';
 
 @Entity()
 export class Requirement {
@@ -56,7 +56,6 @@ export class Requirement {
   @OneToOne(
     () => Achievement,
     (achievement_id) => achievement_id.requirement_id,
-    { cascade: true },
   )
   achievement_id: string;
 

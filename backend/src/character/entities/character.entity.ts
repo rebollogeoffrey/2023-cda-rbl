@@ -58,7 +58,7 @@ export class Character {
     length: 255,
     nullable: true,
     unique: false,
-    default: "You think : 'Why does this only happen to me?!'",
+    default: 'You think : "Why does this only happen to me?!"',
   })
   description: string;
 

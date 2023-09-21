@@ -7,7 +7,7 @@ import {
   UpdateDateColumn,
 } from 'typeorm';
 import { Game } from '../../game/entities/game.entity';
-import { Effect } from 'src/effect/entities/effect.entity';
+import { Effect } from '../../effect/entities/effect.entity';
 
 @Entity()
 export class Item {

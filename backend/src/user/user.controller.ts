@@ -5,9 +5,9 @@ import {
   Param,
   Post,
   Body,
-  Put,
   Delete,
   UseGuards,
+  Put,
 } from '@nestjs/common';
 
 // Service
@@ -36,31 +36,18 @@ export class UserController {
 
   @Get(':id')
   findOne(@Param('id') id: string) {
-    return this.userService.findOne(+id);
+    return this.userService.findOne(id);
   }
 
-  @Patch(':id')
+  @UseGuards(AuthGuard('jwt'))
+  @Put(':id')
   update(@Param('id') id: string, @Body() updateUserDto: UpdateUserDto) {
-    return this.userService.update(+id, updateUserDto);
+    return this.userService.update(id, updateUserDto);
   }
 
+  @UseGuards(AuthGuard('jwt'))
   @Delete(':id')
   remove(@Param('id') id: string) {
-    return this.userService.remove(+id);
-  }
-
-  @UseGuards(AuthGuard('jwt'))
-  @Put()
-  updateUser(
-    @Body()
-    userBody: User,
-  ) {
-    return this.userService.saveUser(userBody);
-  }
-
-  @UseGuards(AuthGuard('jwt'))
-  @Delete()
-  deleteUser(@Body() user: User) {
-    return this.userService.deleteUser(user);
+    return this.userService.remove(id);
   }
 }

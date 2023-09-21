@@ -14,8 +14,8 @@ import { User } from '../../user/entities/user.entity';
 
 @Entity()
 export class Achievement {
-  @PrimaryGeneratedColumn()
-  id: number;
+  @PrimaryGeneratedColumn('uuid')
+  id: string;
 
   @Column({
     type: 'varchar',

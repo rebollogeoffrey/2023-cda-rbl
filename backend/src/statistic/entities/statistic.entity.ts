@@ -9,7 +9,7 @@ import {
   OneToMany,
 } from 'typeorm';
 import { Game } from '../../game/entities/game.entity';
-import { Historic } from 'src/historic/entities/historic.entity';
+import { Historic } from '../../historic/entities/historic.entity';
 
 @Entity()
 export class Statistic {

@@ -1,4 +1,4 @@
-import { statistic_affected } from '../entities/effect.entity';
+import { statistic_affected } from '../effect/entities/effect.entity';
 
 export const valuesEffect = [
   {

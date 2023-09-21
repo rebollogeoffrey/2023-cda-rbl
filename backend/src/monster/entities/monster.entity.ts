@@ -9,7 +9,7 @@ import {
   ManyToOne,
 } from 'typeorm';
 import { Character } from '../../character/entities/character.entity';
-import { Category } from 'src/category/entities/category.entity';
+import { Category } from '../../category/entities/category.entity';
 
 @Entity()
 export class Monster {

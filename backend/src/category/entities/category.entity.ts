@@ -1,7 +1,7 @@
-import { Effect } from 'src/effect/entities/effect.entity';
-import { Historic } from 'src/historic/entities/historic.entity';
-import { Monster } from 'src/monster/entities/monster.entity';
-import { Requirement } from 'src/requirement/entities/requirement.entity';
+import { Effect } from '../../effect/entities/effect.entity';
+import { Historic } from '../../historic/entities/historic.entity';
+import { Monster } from '../../monster/entities/monster.entity';
+import { Requirement } from '../../requirement/entities/requirement.entity';
 import {
   Column,
   CreateDateColumn,
