@@ -1,61 +1,29 @@
 // Base
 import { Injectable } from '@nestjs/common';
 
-// Repository
-import { Repository } from 'typeorm';
-import { InjectRepository } from '@nestjs/typeorm';
-
-// Entity
-import { Achievement } from '../entities/achievement.entity';
+// DTO
+import { CreateAchievementDto } from './dto/create-achievement.dto';
+import { UpdateAchievementDto } from './dto/update-achievement.dto';
 
 @Injectable()
 export class AchievementService {
-  constructor(
-    @InjectRepository(Achievement)
-    private achievementsRepository: Repository<Achievement>, // private userachRepository: Repository<user_
-  ) {}
-
-  async getAchievements(): Promise<Achievement[]> {
-    return await this.achievementsRepository.find();
+  create(createAchievementDto: CreateAchievementDto) {
+    return 'This action adds a new achievement';
   }
 
-  async getAchievementById(id: string): Promise<Achievement[]> {
-    return await this.achievementsRepository.find({
-      select: ['title', 'description'],
-      where: [{ id }],
-    });
+  findAll() {
+    return `This action returns all achievement`;
   }
 
-  async getAllAchievementOwnedByAllUsers(): Promise<Achievement[] | undefined> {
-    return this.achievementsRepository.find({
-      select: ['title', 'description'],
-      where: [{ is_owned: true }],
-      relations: {
-        users: true,
-      },
-    });
+  findOne(id: number) {
+    return `This action returns a #${id} achievement`;
   }
 
-  async test(userId: string): Promise<Achievement[] | undefined> {
-    return this.achievementsRepository.find({
-      join: { alias: 'roles', innerJoin: { users: 'roles.users' } },
-      where: (qb) => {
-        return qb
-          .where({
-            // Filter Role fields
-            a: 1,
-            b: 2,
-          })
-          .andWhere('users.name = :userName', { userName: 'John Doe' }); // Filter related field
-      },
-    });
+  update(id: number, updateAchievementDto: UpdateAchievementDto) {
+    return `This action updates a #${id} achievement`;
   }
 
-  saveAchievement(achievement: Achievement): Promise<Achievement> {
-    return this.achievementsRepository.save(achievement);
-  }
-
-  deleteAchievement(achievement: Achievement): void {
-    return this.achievementsRepository.delete(achievement) as unknown as void;
+  remove(id: number) {
+    return `This action removes a #${id} achievement`;
   }
 }

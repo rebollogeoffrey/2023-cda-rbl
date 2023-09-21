@@ -2,55 +2,52 @@
 import {
   Controller,
   Get,
-  Param,
   Post,
   Body,
-  Put,
+  Patch,
+  Param,
   Delete,
-  UseGuards,
 } from '@nestjs/common';
 
 // Service
 import { AchievementService } from './achievement.service';
 
-// Entity
-import { Achievement } from '../entities/achievement.entity';
+// DTO
+import { CreateAchievementDto } from './dto/create-achievement.dto';
+import { UpdateAchievementDto } from './dto/update-achievement.dto';
 
 // Guard
 import { AuthGuard } from '@nestjs/passport';
 
 @Controller('achievement')
 export class AchievementController {
-  constructor(private readonly achService: AchievementService) {}
-
-  @Get()
-  getAchievements() {
-    return this.achService.getAchievements();
-  }
-
-  @UseGuards(AuthGuard('jwt'))
-  @Get(':id')
-  getAchievementById(@Param() params) {
-    return this.achService.getAchievementById(params.id);
-  }
+  constructor(private readonly achievementService: AchievementService) {}
 
   @Post()
-  saveAchievement(@Body() achievement: Achievement) {
-    return this.achService.saveAchievement(achievement);
+  create(@Body() createAchievementDto: CreateAchievementDto) {
+    return this.achievementService.create(createAchievementDto);
   }
 
-  @UseGuards(AuthGuard('jwt'))
-  @Put()
-  updateAchievement(
-    @Body()
-    achievementBody: Achievement,
+  @Get()
+  findAll() {
+    return this.achievementService.findAll();
+  }
+
+  @Get(':id')
+  findOne(@Param('id') id: string) {
+    return this.achievementService.findOne(+id);
+  }
+
+  @Patch(':id')
+  update(
+    @Param('id') id: string,
+    @Body() updateAchievementDto: UpdateAchievementDto,
   ) {
-    return this.achService.saveAchievement(achievementBody);
+    return this.achievementService.update(+id, updateAchievementDto);
   }
 
-  @UseGuards(AuthGuard('jwt'))
-  @Delete()
-  deleteAchievement(@Body() achievement: Achievement) {
-    return this.achService.deleteAchievement(achievement);
+  @Delete(':id')
+  remove(@Param('id') id: string) {
+    return this.achievementService.remove(+id);
   }
 }
