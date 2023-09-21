@@ -68,14 +68,14 @@ export class Effect {
   updated_at: Date;
 
   // --------------RELATIONS
-  @OneToOne(() => Achievement, (achievement_id) => achievement_id.effect_id, {
+  @OneToOne(() => Achievement, (achievement) => achievement.effect, {
     cascade: false,
   })
-  achievement_id: string;
+  achievement: string;
 
-  @OneToMany(() => Item, (items_id) => items_id.effect_id)
-  items_id: [string];
+  @OneToMany(() => Item, (items) => items.effect)
+  items: [string];
 
-  @ManyToOne(() => Category, (category_id) => category_id.effects_id)
-  category_id: string;
+  @ManyToOne(() => Category, (category) => category.effects)
+  category: string;
 }

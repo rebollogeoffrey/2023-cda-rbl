@@ -37,9 +37,9 @@ export class Historic {
 
   // --------------RELATIONS
 
-  @ManyToOne(() => Statistic, (statistic_id) => statistic_id.historics_id)
-  statistic_id: string;
+  @ManyToOne(() => Statistic, (statistic) => statistic.historics)
+  statistic: string;
 
-  @ManyToOne(() => Category, (category_id) => category_id.historics_id)
-  category_id: string;
+  @ManyToOne(() => Category, (category) => category.historics)
+  category: string;
 }

@@ -59,18 +59,18 @@ export class Category {
   updated_at: Date;
 
   // --------------RELATIONS
-  @OneToMany(() => Monster, (monsters_id) => monsters_id.category_id)
-  monsters_id: [string];
+  @OneToMany(() => Monster, (monsters) => monsters.category)
+  monsters: [string];
 
-  @OneToMany(() => Effect, (effects_id) => effects_id.category_id)
-  effects_id: [string];
+  @OneToMany(() => Effect, (effects) => effects.category)
+  effects: [string];
 
   @OneToMany(
     () => Requirement,
-    (requirements_id) => requirements_id.category_id,
+    (requirements) => requirements.category,
   )
-  requirements_id: [string];
+  requirements: [string];
 
-  @OneToMany(() => Historic, (historics_id) => historics_id.category_id)
-  historics_id: [string];
+  @OneToMany(() => Historic, (historics) => historics.category)
+  historics: [string];
 }

@@ -50,24 +50,24 @@ export class Achievement {
   // --------------RELATIONS
   @OneToOne(
     () => Requirement,
-    (requirement_id) => requirement_id.achievement_id,
+    (requirement) => requirement.achievement,
     { cascade: true },
   )
-  requirement_id: string;
+  requirement: string;
 
-  @OneToOne(() => Effect, (effet_id) => effet_id.achievement_id, {
+  @OneToOne(() => Effect, (effet) => effet.achievement, {
     cascade: true,
   })
-  effect_id: string;
+  effect: string;
 
-  @ManyToOne(() => Game, (game_id) => game_id.achievements_id, {
+  @ManyToOne(() => Game, (game) => game.achievements, {
     cascade: false,
   })
-  game_id: string;
+  game: string;
 
   @ManyToMany(() => User, {
     cascade: false,
   })
   @JoinTable({ name: 'user_achievement' })
-  users_id: string[];
+  users: string[];
 }

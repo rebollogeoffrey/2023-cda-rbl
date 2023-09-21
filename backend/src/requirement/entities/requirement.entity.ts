@@ -55,10 +55,10 @@ export class Requirement {
   // --------------RELATIONS
   @OneToOne(
     () => Achievement,
-    (achievement_id) => achievement_id.requirement_id,
+    (achievement) => achievement.requirement,
   )
-  achievement_id: string;
+  achievement: string;
 
-  @ManyToOne(() => Category, (category_id) => category_id.requirements_id)
-  category_id: string;
+  @ManyToOne(() => Category, (category) => category.requirements)
+  category: string;
 }

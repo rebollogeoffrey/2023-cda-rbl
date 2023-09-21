@@ -41,8 +41,8 @@ export class Monster {
   // --------------RELATIONS
   @OneToOne(() => Character, { cascade: true })
   @JoinColumn()
-  character_id: string;
+  character: string;
 
-  @ManyToOne(() => Category, (category_id) => category_id.monsters_id)
-  category_id: string;
+  @ManyToOne(() => Category, (category) => category.monsters)
+  category: string;
 }

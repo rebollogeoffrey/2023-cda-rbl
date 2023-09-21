@@ -61,13 +61,13 @@ export class Item {
   updated_at: Date;
 
   // --------------RELATIONS
-  @ManyToOne(() => Game, (game_id) => game_id.items_id, {
+  @ManyToOne(() => Game, (game) => game.items, {
     cascade: false,
   })
-  game_id: string;
+  game: string;
 
-  @ManyToOne(() => Effect, (effect_id) => effect_id.items_id)
-  effect_id: string;
+  @ManyToOne(() => Effect, (effect) => effect.items)
+  effect: string;
 
   // Relation ManyToMany with Character is in entity Character
 }

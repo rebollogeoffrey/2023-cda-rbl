@@ -77,5 +77,5 @@ export class User {
     cascade: true,
   })
   @JoinTable({ name: 'user_achievement' })
-  achievements_id: string[];
+  achievements: string[];
 }
