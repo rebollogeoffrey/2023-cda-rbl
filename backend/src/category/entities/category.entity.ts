@@ -1,4 +1,5 @@
 import { Effect } from 'src/effect/entities/effect.entity';
+import { Historic } from 'src/historic/entities/historic.entity';
 import { Monster } from 'src/monster/entities/monster.entity';
 import { Requirement } from 'src/requirement/entities/requirement.entity';
 import {
@@ -69,4 +70,7 @@ export class Category {
     (requirements_id) => requirements_id.category_id,
   )
   requirements_id: [string];
+
+  @OneToMany(() => Historic, (historics_id) => historics_id.category_id)
+  historics_id: [string];
 }
