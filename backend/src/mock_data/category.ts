@@ -28,7 +28,39 @@ export const valuesCategory = [
     name: 'ANIMATE',
   },
   {
-    id: '7547fd73-8535-4eb2-b4b3-cd460c4d04d3',
+    id: '861a6072-bd19-40c5-bc15-b282101f9b6c',
     name: 'PLANT',
+  },
+  {
+    id: '2dfe0a54-c10f-4811-8bbd-b6539054ab4d',
+    name: 'GOLD',
+  },
+  {
+    id: '918b3ba8-bb2a-47d0-baa0-f34e517bc7f1',
+    name: 'STRENGTH',
+  },
+  {
+    id: 'd0591e20-8d1a-4f39-8529-c306794b46b4',
+    name: 'DEXTERITY',
+  },
+  {
+    id: 'ed84cf09-e056-4435-96eb-815721de9e3d',
+    name: 'DODGE',
+  },
+  {
+    id: '69fe131f-710f-42ab-8936-f3a945b82759',
+    name: 'HEALTH_MAX',
+  },
+  {
+    id: 'c18c8448-4d57-412b-8c34-af380fde2d1a',
+    name: 'RUN',
+  },
+  {
+    id: 'b30aa73c-3527-4b3c-96c8-bafb0134a054',
+    name: 'MERCHANT',
+  },
+  {
+    id: '27a60ddd-6406-4d1b-9749-457e69a9f305',
+    name: 'ALWAYS',
   },
 ];
