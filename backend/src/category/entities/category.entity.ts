@@ -1,16 +1,17 @@
+import { Effect } from 'src/effect/entities/effect.entity';
 import { Monster } from 'src/monster/entities/monster.entity';
+import { Requirement } from 'src/requirement/entities/requirement.entity';
 import {
   Column,
   CreateDateColumn,
   Entity,
-  JoinColumn,
   OneToMany,
-  OneToOne,
   PrimaryGeneratedColumn,
   UpdateDateColumn,
 } from 'typeorm';
 
 export enum CategoryName {
+  ALWAYS = 'always',
   ANIMATE = 'animate',
   BLOB = 'blob',
   DEAMON = 'daemon',
@@ -59,4 +60,13 @@ export class Category {
   // --------------RELATIONS
   @OneToMany(() => Monster, (monsters_id) => monsters_id.category_id)
   monsters_id: [string];
+
+  @OneToMany(() => Effect, (effects_id) => effects_id.category_id)
+  effects_id: [string];
+
+  @OneToMany(
+    () => Requirement,
+    (requirements_id) => requirements_id.category_id,
+  )
+  requirements_id: [string];
 }

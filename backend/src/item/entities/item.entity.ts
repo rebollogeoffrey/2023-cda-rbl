@@ -26,6 +26,7 @@ export class Item {
     type: 'int',
     unique: false,
     nullable: false,
+    default: 0,
   })
   price: number;
 

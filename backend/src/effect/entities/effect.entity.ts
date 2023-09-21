@@ -6,9 +6,11 @@ import {
   OneToMany,
   CreateDateColumn,
   UpdateDateColumn,
+  ManyToOne,
 } from 'typeorm';
 import { Achievement } from '../../achievement/entities/achievement.entity';
 import { Item } from 'src/item/entities/item.entity';
+import { Category } from 'src/category/entities/category.entity';
 
 export enum statistic_affected {
   GOLD = 'gold',
@@ -73,4 +75,7 @@ export class Effect {
 
   @OneToMany(() => Item, (items_id) => items_id.effect_id)
   items_id: [string];
+
+  @ManyToOne(() => Category, (category_id) => category_id.effects_id)
+  category_id: string;
 }

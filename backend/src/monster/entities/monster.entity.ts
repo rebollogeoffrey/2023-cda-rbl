@@ -17,14 +17,6 @@ export class Monster {
   id: string;
 
   @Column({
-    type: 'varchar',
-    length: 80,
-    unique: false,
-    nullable: true,
-  })
-  category: string;
-
-  @Column({
     type: 'int',
     unique: false,
     nullable: false,

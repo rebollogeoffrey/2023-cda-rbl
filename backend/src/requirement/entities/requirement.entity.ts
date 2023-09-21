@@ -5,8 +5,10 @@ import {
   OneToOne,
   CreateDateColumn,
   UpdateDateColumn,
+  ManyToOne,
 } from 'typeorm';
 import { Achievement } from '../../achievement/entities/achievement.entity';
+import { Category } from 'src/category/entities/category.entity';
 
 @Entity()
 export class Requirement {
@@ -57,4 +59,7 @@ export class Requirement {
     { cascade: true },
   )
   achievement_id: string;
+
+  @ManyToOne(() => Category, (category_id) => category_id.requirements_id)
+  category_id: string;
 }
