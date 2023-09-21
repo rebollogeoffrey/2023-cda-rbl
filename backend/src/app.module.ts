@@ -22,6 +22,7 @@ import { EffectModule } from './effect/effect.module';
 import { RequirementModule } from './requirement/requirement.module';
 import { StatisticModule } from './statistic/statistic.module';
 import { CategoryModule } from './category/category.module';
+import { HistoricModule } from './historic/historic.module';
 
 @Module({
   imports: [
@@ -31,7 +32,6 @@ import { CategoryModule } from './category/category.module';
       imports: [ConfigModule],
       useFactory: () => databaseConfig,
     }),
-    AchievementModule,
     UserModule,
     AchievementModule,
     GameModule,
@@ -42,6 +42,7 @@ import { CategoryModule } from './category/category.module';
     RequirementModule,
     StatisticModule,
     CategoryModule,
+    HistoricModule,
   ],
   controllers: [AppController],
   providers: [AppService],

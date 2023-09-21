@@ -7,6 +7,7 @@ import {
   Patch,
   Param,
   Delete,
+  UseGuards,
 } from '@nestjs/common';
 
 // Service
@@ -23,6 +24,7 @@ import { AuthGuard } from '@nestjs/passport';
 export class AchievementController {
   constructor(private readonly achievementService: AchievementService) {}
 
+  @UseGuards(AuthGuard)
   @Post()
   create(@Body() createAchievementDto: CreateAchievementDto) {
     return this.achievementService.create(createAchievementDto);

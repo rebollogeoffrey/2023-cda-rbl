@@ -1,7 +1,10 @@
 {
   "dependencies": {
-    "@nestjs/passport": "^10.0.2",
     "@nestjs/mapped-types": "*",
+    "@nestjs/passport": "^10.0.2",
     "dotenv": "^16.3.1"
+  },
+  "devDependencies": {
+    "@nestjs/config": "^3.1.1"
   }
 }
