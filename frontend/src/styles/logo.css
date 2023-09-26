@@ -1,0 +1,22 @@
+.logo-constructor {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding: 5% 0;
+}
+
+.logo-constructor > img {
+  display: block;
+  max-height: 95px;
+  width: auto;
+  height: auto;
+}
+
+.logo-constructor-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.logo-constructor-text > span {
+  margin: auto;
+}

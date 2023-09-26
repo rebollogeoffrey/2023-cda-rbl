@@ -1,0 +1,15 @@
+.footer-constructor {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+
+.footer-constructor > p {
+  font-size: smaller;
+}
+
+.footer-constructor > p:first-of-type {
+  margin-top: 5%;
+}

@@ -1,13 +1,17 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+:root {
+  --LightBoardColor: #f2f2f2;
+  --LightStickerColor1: #ffd972;
+  --LightStickerColor2: #8dcb8c;
+  --LightStickerColor3: #ffa69e;
+  --LightStickerColor4: #8cb8cb;
+  --LightStickerColor5: #cb8cc8;
+  --LightHeaderColor: #731fb8;
+  --LightFontColor: #ffffff;
+  --LightFontColorSticker: #000000;
+  --DarkBoardColor: #1d1d1d;
+  --DarkStickerColor1: #665600;
+  --DarkStickerColor2: #143613;
+  --DarkStickerColor3: #5e2621;
+  --DarkStickerColor4: #04384e;
+  --DarkStickerColor5: #5e2659;
 }
