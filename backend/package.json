@@ -22,7 +22,8 @@
     "migration:generate": "./node_modules/.bin/ts-node ./node_modules/.bin/typeorm migration:generate -d src/config/migration.config.ts",
     "migration:up": "./node_modules/.bin/ts-node ./node_modules/.bin/typeorm migration:run -d src/config/migration.config.ts",
     "migration:down": "./node_modules/.bin/ts-node ./node_modules/.bin/typeorm migration:revert -d src/config/migration.config.ts",
-    "mock:run": "./node_modules/.bin/ts-node ./node_modules/.bin/typeorm migration:run -d src/config/mock.config.ts"
+    "mock:run": "./node_modules/.bin/ts-node ./node_modules/.bin/typeorm migration:run -d src/config/mock.config.ts",
+    "mock:rown": "./node_modules/.bin/ts-node ./node_modules/.bin/typeorm migration:revert -d src/config/mock.config.ts"
   },
   "dependencies": {
     "@nestjs/common": "^10.0.0",

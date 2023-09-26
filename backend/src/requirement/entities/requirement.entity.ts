@@ -30,14 +30,6 @@ export class Requirement {
   })
   counter: number;
 
-  @Column({
-    type: 'varchar',
-    length: 80,
-    unique: false,
-    nullable: true,
-  })
-  category: string;
-
   // --------------TIMESTAMPS
   @CreateDateColumn({
     type: 'timestamp',
@@ -53,10 +45,7 @@ export class Requirement {
   updated_at: Date;
 
   // --------------RELATIONS
-  @OneToOne(
-    () => Achievement,
-    (achievement) => achievement.requirement,
-  )
+  @OneToOne(() => Achievement, (achievement) => achievement.requirement)
   achievement: string;
 
   @ManyToOne(() => Category, (category) => category.requirements)

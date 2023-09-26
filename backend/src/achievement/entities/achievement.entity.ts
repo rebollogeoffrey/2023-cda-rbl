@@ -48,11 +48,9 @@ export class Achievement {
   is_owned: boolean;
 
   // --------------RELATIONS
-  @OneToOne(
-    () => Requirement,
-    (requirement) => requirement.achievement,
-    { cascade: true },
-  )
+  @OneToOne(() => Requirement, (requirement) => requirement.achievement, {
+    cascade: true,
+  })
   requirement: string;
 
   @OneToOne(() => Effect, (effet) => effet.achievement, {
