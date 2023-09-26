@@ -44,15 +44,6 @@ export class Effect {
   })
   value: number;
 
-  // TODO : Replace string by enum in when column
-  @Column({
-    type: 'varchar',
-    length: 50,
-    unique: false,
-    nullable: false,
-  })
-  when: string;
-
   // --------------TIMESTAMPS
   @CreateDateColumn({
     type: 'timestamp',
