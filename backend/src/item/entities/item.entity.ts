@@ -36,14 +36,6 @@ export class Item {
     unique: false,
     nullable: true,
   })
-  effect: string;
-
-  @Column({
-    type: 'varchar',
-    length: 255,
-    unique: false,
-    nullable: true,
-  })
   url_image: string;
 
   // --------------TIMESTAMPS
