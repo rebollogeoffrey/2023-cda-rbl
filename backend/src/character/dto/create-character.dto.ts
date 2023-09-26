@@ -1,29 +1,30 @@
-import { IsString, Length, Min, Max, IsNumber } from 'class-validator';
+import { IsString, Length, IsNumber, IsPositive } from 'class-validator';
 export class CreateCharacterDto {
-  @Length(10, 255)
+  @Length(1, 255)
   @IsString()
   readonly name: string;
 
-  @Length(10, 255)
-  @IsString()
+  @IsNumber()
+  @IsPositive()
   readonly max_health: number;
 
-  @Min(60)
   @IsNumber()
-  @Max(100)
+  @IsPositive()
   readonly strength: number;
 
-  @Min(60)
   @IsNumber()
-  @Max(100)
+  @IsPositive()
   readonly dexterity: number;
 
-  @Min(60)
   @IsNumber()
-  @Max(100)
+  @IsPositive()
   readonly dodge: number;
 
-  @Length(10, 255)
+  @IsString()
+  @Length(0, 255)
+  readonly description: string;
+
+  @Length(1, 255)
   @IsString()
   readonly url_image: string;
 }

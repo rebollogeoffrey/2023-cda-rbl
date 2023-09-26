@@ -6,24 +6,22 @@ import {
   IsString,
   IsEnum,
 } from 'class-validator';
-import { UserRole } from '../entities/user.entity';
+import { user_role } from '../entities/user.entity';
 
 export class CreateUserDto {
-  @IsEnum(UserRole)
-  readonly role: UserRole;
+  @IsEnum(user_role)
+  readonly role: user_role;
 
+  @IsString()
   @Length(1, 80)
   @IsNotEmpty()
-  @IsString()
   readonly name: string;
 
-  @IsNotEmpty()
   @IsEmail()
-  @Length(10, 255)
+  @IsNotEmpty()
+  @Length(1, 255)
   readonly email: string;
 
-  @IsNotEmpty()
-  @Length(5, 255)
   @IsStrongPassword({
     minLength: 5,
     minLowercase: 1,
@@ -31,6 +29,8 @@ export class CreateUserDto {
     minNumbers: 1,
     minSymbols: 1,
   })
+  @Length(5, 255)
+  @IsNotEmpty()
   readonly password: string;
 
   @IsString()

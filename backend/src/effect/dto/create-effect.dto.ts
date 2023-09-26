@@ -1,12 +1,4 @@
-import {
-  IsString,
-  Length,
-  Min,
-  Max,
-  IsBoolean,
-  IsEnum,
-  IsNumber,
-} from 'class-validator';
+import { Min, IsBoolean, IsEnum, IsNumber, IsPositive } from 'class-validator';
 import { statistic_affected } from '../entities/effect.entity';
 export class CreateEffectDto {
   @IsBoolean()
@@ -15,12 +7,8 @@ export class CreateEffectDto {
   @IsEnum(statistic_affected)
   readonly stat_affected: statistic_affected;
 
-  @Min(5)
   @IsNumber()
-  @Max(25)
+  @Min(1)
+  @IsPositive()
   readonly value: number;
-
-  @Length(10, 255)
-  @IsString()
-  readonly url_image: string;
 }
