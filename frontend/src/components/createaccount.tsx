@@ -1,29 +1,29 @@
-import "../styles/createaccount.css";
+import "../styles/form.css";
 
 function CreateAccount() {
   return (
-    <div className="create-constructor">
-      <h2> New Player ? </h2>
-      <h1> Come Here! </h1>
-      <form className="create-form-constructor">
-        <label> Username </label>
+    <div className="form-container container-create">
+      <h1> New Player ? </h1>
+      <h2> Come Here! </h2>
+      <form className="form-create">
+        <label>Username</label>
         <input
           type="text"
-          id="create-username"
+          id="username-create"
           name="username"
           placeholder="Your username.."
         />
-        <label> Email </label>
+        <label>Email</label>
         <input
           type="text"
-          id="create-email"
+          id="email-create"
           name="email"
           placeholder="Your email.."
         />
-        <label> Password </label>
+        <label>Password</label>
         <input
           type="password"
-          id="create-password"
+          id="password-create"
           name="password"
           placeholder="Your password.."
         />

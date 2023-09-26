@@ -1,35 +1,35 @@
-import "../styles/modifyaccount.css";
+import "../styles/form.css";
 
 function ModifyAccount() {
   return (
-    <div className="modify-constructor">
+    <div className="form-container container-modify">
       <h1> Your account </h1>
-      <form className="modify-form-constructor">
-        <label> Username </label>
+      <form className="form-modify">
+        <label>Username</label>
         <input
           type="text"
-          id="modify-username"
+          id="username-modify"
           name="username"
           placeholder="Your username.."
         />
-        <label> Email </label>
+        <label>Email</label>
         <input
           type="text"
-          id="modify-email"
+          id="email-modify"
           name="email"
           placeholder="Your email.."
         />
-        <label> Password </label>
+        <label>Password</label>
         <input
           type="password"
-          id="modify-password"
+          id="password-modify"
           name="password"
           placeholder="Your password.."
         />
-        <label> Confirm Password </label>
+        <label>Confirm Password</label>
         <input
           type="password"
-          id="modify-confirm-password"
+          id="confirm-password-modify"
           name="confirm-password"
           placeholder="Confirm your password.."
         />

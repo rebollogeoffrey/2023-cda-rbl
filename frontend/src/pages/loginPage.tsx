@@ -6,8 +6,10 @@ function LoginPage() {
   return (
     <>
       <Logo />
-      <Login />
-      <CreateAccount />
+      <main>
+        <Login />
+        <CreateAccount />
+      </main>
     </>
   );
 }

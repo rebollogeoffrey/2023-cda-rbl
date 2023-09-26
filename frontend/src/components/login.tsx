@@ -1,21 +1,21 @@
-import "../styles/login.css";
+import "../styles/form.css";
 
 function Login() {
   return (
-    <div className="login-constructor">
+    <div className="form-container container-login">
       <h1> Login </h1>
-      <form className="login-form-constructor">
-        <label> Username </label>
+      <form className="form-login">
+        <label>Username</label>
         <input
           type="text"
-          id="login-username"
+          id="username-login"
           name="username"
           placeholder="Your username.."
         />
-        <label> Password </label>
+        <label>Password</label>
         <input
           type="password"
-          id="login-password"
+          id="password-login"
           name="password"
           placeholder="Your password.."
         />

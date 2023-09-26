@@ -2,9 +2,23 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: #1e1e1e;
   font-family: "Global";
   color: #ffffff;
+}
+
+body {
+  background-color: #1e1e1e;
+  background-image: url("../assets/images/backgroundRBL.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  justify-content: space-between;
 }
 
 @font-face {

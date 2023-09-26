@@ -1,15 +1,12 @@
 .footer-constructor {
-  position: fixed;
+  position: sticky;
   left: 0;
   bottom: 0;
   width: 100%;
   text-align: center;
+  background-color: black;
 }
 
 .footer-constructor > p {
   font-size: smaller;
-}
-
-.footer-constructor > p:first-of-type {
-  margin-top: 5%;
 }
