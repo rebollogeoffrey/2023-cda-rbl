@@ -1,0 +1,30 @@
+.button-burger {
+  background-color: var(--LightHeaderColor);
+  position: relative;
+  border: none;
+  z-index: 99;
+}
+
+.bar1,
+.bar2,
+.bar3 {
+  background-color: white;
+  width: 35px;
+  height: 5px;
+  margin: 6px 0;
+  transition: 0.4s;
+}
+/* Rotate first bar */
+.change .bar1 {
+  transform: translate(0, 11px) rotate(-45deg);
+}
+
+/* Fade out the second bar */
+.change .bar2 {
+  opacity: 0;
+}
+
+/* Rotate last bar */
+.change .bar3 {
+  transform: translate(0, -11px) rotate(45deg);
+}
