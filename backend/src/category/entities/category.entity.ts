@@ -11,7 +11,7 @@ import {
   UpdateDateColumn,
 } from 'typeorm';
 
-export enum CategoryName {
+export enum category_name {
   ALWAYS = 'always',
   ANIMATE = 'animate',
   BLOB = 'blob',
@@ -40,9 +40,9 @@ export class Category {
 
   @Column({
     type: 'enum',
-    enum: CategoryName,
+    enum: category_name,
   })
-  role: CategoryName;
+  role: category_name;
 
   // --------------TIMESTAMPS
   @CreateDateColumn({

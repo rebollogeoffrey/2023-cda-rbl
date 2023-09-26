@@ -28,16 +28,16 @@ export class Achievement {
   @Column({
     type: 'varchar',
     length: 255,
-    unique: false,
     nullable: true,
+    unique: false,
   })
   description: string;
 
   @Column({
     type: 'varchar',
     length: 255,
-    unique: false,
     nullable: true,
+    unique: false,
   })
   url_image: string;
 

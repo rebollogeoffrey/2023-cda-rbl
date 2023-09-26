@@ -19,12 +19,14 @@ export class Statistic {
   @Column({
     type: 'int',
     nullable: false,
+    default: 0,
   })
   nb_win: number;
 
   @Column({
     type: 'int',
     nullable: false,
+    default: 0,
   })
   nb_lose: number;
 
