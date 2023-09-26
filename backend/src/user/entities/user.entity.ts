@@ -9,7 +9,7 @@ import {
 } from 'typeorm';
 import { Achievement } from '../../achievement/entities/achievement.entity';
 
-export enum UserRole {
+export enum user_role {
   ADMIN = 'admin',
   BASIC = 'basic',
 }
@@ -21,10 +21,10 @@ export class User {
 
   @Column({
     type: 'enum',
-    enum: UserRole,
-    default: UserRole.BASIC,
+    enum: user_role,
+    default: user_role.BASIC,
   })
-  role: UserRole;
+  role: user_role;
 
   @Column({
     type: 'varchar',
@@ -52,7 +52,7 @@ export class User {
 
   @Column({
     type: 'varchar',
-    length: '255',
+    length: 255,
     unique: false,
     nullable: true,
   })
