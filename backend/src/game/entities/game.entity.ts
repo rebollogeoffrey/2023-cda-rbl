@@ -5,6 +5,8 @@ import {
   OneToMany,
   JoinColumn,
   OneToOne,
+  CreateDateColumn,
+  UpdateDateColumn,
 } from 'typeorm';
 import { Character } from '../../character/entities/character.entity';
 import { Item } from '../../item/entities/item.entity';
@@ -31,6 +33,20 @@ export class Game {
     unique: false,
   })
   description: string;
+
+  // --------------TIMESTAMPS
+  @CreateDateColumn({
+    type: 'timestamp',
+    default: () => 'CURRENT_TIMESTAMP(6)',
+  })
+  created_at: Date;
+
+  @UpdateDateColumn({
+    type: 'timestamp',
+    default: () => 'CURRENT_TIMESTAMP(6)',
+    onUpdate: 'CURRENT_TIMESTAMP(6)',
+  })
+  updated_at: Date;
 
   // --------------RELATIONS
   @OneToMany(() => Character, (characters_id) => characters_id.game_id, {

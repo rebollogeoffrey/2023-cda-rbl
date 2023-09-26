@@ -1,5 +1,14 @@
-import { Entity, Column, PrimaryGeneratedColumn, OneToOne } from 'typeorm';
+import {
+  Entity,
+  Column,
+  PrimaryGeneratedColumn,
+  OneToOne,
+  CreateDateColumn,
+  UpdateDateColumn,
+  ManyToOne,
+} from 'typeorm';
 import { Achievement } from '../../achievement/entities/achievement.entity';
+import { Category } from 'src/category/entities/category.entity';
 
 @Entity()
 export class Requirement {
@@ -29,6 +38,20 @@ export class Requirement {
   })
   category: string;
 
+  // --------------TIMESTAMPS
+  @CreateDateColumn({
+    type: 'timestamp',
+    default: () => 'CURRENT_TIMESTAMP(6)',
+  })
+  created_at: Date;
+
+  @UpdateDateColumn({
+    type: 'timestamp',
+    default: () => 'CURRENT_TIMESTAMP(6)',
+    onUpdate: 'CURRENT_TIMESTAMP(6)',
+  })
+  updated_at: Date;
+
   // --------------RELATIONS
   @OneToOne(
     () => Achievement,
@@ -36,4 +59,7 @@ export class Requirement {
     { cascade: true },
   )
   achievement_id: string;
+
+  @ManyToOne(() => Category, (category_id) => category_id.requirements_id)
+  category_id: string;
 }

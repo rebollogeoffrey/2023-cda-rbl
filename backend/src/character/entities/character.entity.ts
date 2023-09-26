@@ -56,6 +56,15 @@ export class Character {
   @Column({
     type: 'varchar',
     length: 255,
+    nullable: true,
+    unique: false,
+    default: "You think : 'Why does this only happen to me?!'",
+  })
+  description: string;
+
+  @Column({
+    type: 'varchar',
+    length: 255,
     unique: false,
     nullable: true,
   })
