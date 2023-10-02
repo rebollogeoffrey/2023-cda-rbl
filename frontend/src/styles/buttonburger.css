@@ -1,8 +1,10 @@
 .button-burger {
-  background-color: var(--LightHeaderColor);
   position: relative;
-  border: none;
+  border: 3px black solid;
+  border-radius: 3px;
   z-index: 99;
+  max-width: 41px;
+  background-color: black;
 }
 
 .bar1,

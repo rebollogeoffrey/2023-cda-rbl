@@ -1,0 +1,45 @@
+.menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  height: 100%;
+  width: 30%;
+  min-width: 300px;
+  position: fixed;
+  z-index: 8;
+  top: 0;
+  border-bottom-right-radius: 20px;
+  left: -500px;
+  overflow-x: hidden;
+  background-color: black;
+  padding-top: 4rem;
+  transition: 0.5s ease-in-out;
+}
+.menu-show {
+  left: 0;
+}
+::-webkit-scrollbar {
+  display: none;
+}
+
+.menu-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.menu-items {
+  display: flex;
+  flex-direction: column;
+}
+
+.menu-items > h2,
+.logout > h2 {
+  padding: 10%;
+}
+
+.logout > h2 > a {
+  text-shadow: 0 0 5px red;
+}
