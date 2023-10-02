@@ -1,10 +1,8 @@
-import Logo from "../components/logo";
 import ModifyAccountForm from "../components/formmodifyaccount";
 
-function ModifyPage() {
+function AccountPage() {
   return (
     <>
-      <Logo />
       <main>
         <ModifyAccountForm />
       </main>
@@ -12,4 +10,4 @@ function ModifyPage() {
   );
 }
 
-export default ModifyPage;
+export default AccountPage;
