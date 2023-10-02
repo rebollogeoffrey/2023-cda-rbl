@@ -11,6 +11,7 @@ function Menu() {
       <div className="menu-container">
         <Logo />
         <div className="menu-items">
+          {/* TODO : Add the link for the route */}
           <h2>
             <a>Statistics</a>
           </h2>

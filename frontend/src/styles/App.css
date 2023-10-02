@@ -3,11 +3,11 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Global";
-  color: #ffffff;
+  color: var(--LightestOne);
 }
 
 body {
-  background-color: #1e1e1e;
+  background-color: var(--NearBlack);
   background-image: url("../assets/images/backgroundRBL.jpg");
   background-position: center;
   background-repeat: no-repeat;
