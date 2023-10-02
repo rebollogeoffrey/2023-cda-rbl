@@ -5,8 +5,9 @@
   width: 100%;
   text-align: center;
   background-color: black;
+  opacity: 50%;
 }
 
-.footer-constructor > p {
+.footer-constructor>p {
   font-size: smaller;
 }

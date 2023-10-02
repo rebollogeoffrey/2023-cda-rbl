@@ -1,6 +1,6 @@
 import "../styles/form.css";
 
-function CreateAccount() {
+function CreateAccountForm() {
   return (
     <div className="form-container container-create">
       <h1> New Player ? </h1>
@@ -34,4 +34,4 @@ function CreateAccount() {
   );
 }
 
-export default CreateAccount;
+export default CreateAccountForm;

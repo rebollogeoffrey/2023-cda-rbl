@@ -1,12 +1,12 @@
 import Logo from "../components/logo";
-import ModifyAccount from "../components/modifyaccount";
+import ModifyAccountForm from "../components/formmodifyaccount";
 
 function ModifyPage() {
   return (
     <>
       <Logo />
       <main>
-        <ModifyAccount />
+        <ModifyAccountForm />
       </main>
     </>
   );

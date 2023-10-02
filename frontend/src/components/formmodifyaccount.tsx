@@ -1,6 +1,6 @@
 import "../styles/form.css";
 
-function ModifyAccount() {
+function ModifyAccountForm() {
   return (
     <div className="form-container container-modify">
       <h1> Your account </h1>
@@ -40,4 +40,4 @@ function ModifyAccount() {
   );
 }
 
-export default ModifyAccount;
+export default ModifyAccountForm;

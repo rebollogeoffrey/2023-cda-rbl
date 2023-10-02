@@ -13,11 +13,12 @@ function App() {
   return (
     <NavBarContext.Provider value={{ modalMenu, setModalMenu }}>
       <NavBar />
-      {/* Replace Top Footer with the navbar */}
+      {/* TODO : Replace Top Footer with the navbar */}
       <Routes>
         <Route path="/" element={<LoginPage />} />
         <Route path="/home" element={<LoginPage />} />
         <Route path="/account" element={<ModifyPage />} />
+        {/* TODO : add the correct route's element */}
         <Route path="/tgpq" element={<ModifyPage />} />
       </Routes>
       <Footer />

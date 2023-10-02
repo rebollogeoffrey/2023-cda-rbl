@@ -1,4 +1,4 @@
-import CreateAccount from "../components/createaccount";
+import CreateAccountForm from "../components/formcreateaccount";
 import Login from "../components/login";
 import Logo from "../components/logo";
 
@@ -8,7 +8,7 @@ function LoginPage() {
       <Logo />
       <main>
         <Login />
-        <CreateAccount />
+        <CreateAccountForm />
       </main>
     </>
   );
