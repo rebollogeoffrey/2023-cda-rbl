@@ -1,3 +1,4 @@
+import Hub from "../components/hub";
 import Logo from "../components/logo";
 
 function HomePage() {
@@ -5,7 +6,7 @@ function HomePage() {
     <>
       <Logo />
       <main>
-        <h2>Choose Your Game</h2>
+        <Hub />
       </main>
     </>
   );

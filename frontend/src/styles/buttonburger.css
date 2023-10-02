@@ -1,9 +1,9 @@
 .button-burger {
-  position: relative;
+  position: absolute;
   border: none;
   border-radius: 3px;
   z-index: 99;
-  max-width: 50px;
+  width: 50px;
   background-color: var(--DarkestOne);
   padding: 0.4rem 0.1rem;
   margin: 2% 0 0 2%;
