@@ -6,6 +6,7 @@
   --NearWhite: #d9d9d9;
   --LightestOne: #ffffff;
   --DarkestOne: #000000;
+  --Golden: #897b00;
 }
 
 main {
@@ -19,5 +20,6 @@ main {
     flex-direction: row;
     justify-content: space-around;
     align-items: flex-start;
+    margin-bottom: 10vh;
   }
 }

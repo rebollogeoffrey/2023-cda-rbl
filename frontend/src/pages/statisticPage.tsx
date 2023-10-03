@@ -1,11 +1,12 @@
 import Logo from "../components/logo";
+import Statistic from "../components/statistic";
 
 function StatisticPage() {
   return (
     <>
       <Logo />
       <main>
-        <h2>Statistics</h2>
+        <Statistic />
       </main>
     </>
   );

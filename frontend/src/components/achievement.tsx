@@ -94,29 +94,28 @@ function Achievement() {
 
   const gameUnique = [...new Set(arrayTest.map((data) => data.game))];
 
-  console.log("gameUnique :>> ", gameUnique);
   return (
     <div className="ach">
-      <h2>Achievements</h2>
+      <h1>Achievements</h1>
       <div className="ach-container">
         {gameUnique.map((data) => {
           return (
-            <div className="ach-game">
-              <h3>{data}</h3>
-              <ul className="ach-game-list">
+            <div className={`ach-game ${data}`}>
+              <h2>{data}</h2>
+              <ul>
                 {arrayTest.map((ach) => {
                   if (data === ach.game) {
                     return (
                       <li className="ach-game-item">
                         <div>
                           <img
-                            className="ach-game-item-img"
                             src={ach.isOwned ? starFilled : starEmpty}
+                            className={ach.isOwned ? "" : "ach-game-img-empty"}
                           />
                         </div>
 
-                        <div className="ach-game-item-desc">
-                          <h4>{ach.title}</h4>
+                        <div>
+                          <h3>{ach.title}</h3>
                           <p>{ach.description}</p>
                         </div>
                       </li>

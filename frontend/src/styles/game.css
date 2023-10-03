@@ -1,0 +1,49 @@
+.TGPQ {
+  border-radius: 10px;
+  background: linear-gradient(var(--DarkRed), var(--DarkestOne));
+}
+
+.Lootery {
+  border-radius: 10px;
+  background: linear-gradient(var(--Golden), var(--DarkestOne));
+}
+
+.Patata {
+  border-radius: 10px;
+  background: linear-gradient(green, var(--DarkestOne));
+}
+
+.Pouet {
+  border-radius: 10px;
+  background: linear-gradient(blue, var(--DarkestOne));
+}
+
+.Mount {
+  border-radius: 10px;
+  background: linear-gradient(violet, var(--DarkestOne));
+}
+
+.border-TGPQ,
+.border-TGPQ > h2 {
+  border-color: var(--DarkRed);
+}
+
+.border-Lootery,
+.border-Lootery > h2 {
+  border-color: var(--Golden);
+}
+
+.border-Pouet,
+.border-Pouet > h2 {
+  border-color: blue;
+}
+
+.border-Patata,
+.border-Patata > h2 {
+  border-color: green;
+}
+
+.border-Mount,
+.border-Mount > h2 {
+  border-color: violet;
+}
