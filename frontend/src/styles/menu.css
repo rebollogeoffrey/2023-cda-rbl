@@ -16,9 +16,11 @@
   padding-top: 4rem;
   transition: 0.5s ease-in-out;
 }
+
 .menu-show {
   left: 0;
 }
+
 ::-webkit-scrollbar {
   display: none;
 }
@@ -33,13 +35,17 @@
 .menu-items {
   display: flex;
   flex-direction: column;
+  font-size: 200%;
 }
 
-.menu-items > h1,
-.logout > h1 {
-  padding: 10%;
+.menu-items>a,
+.logout {
+  text-decoration: none;
+  margin: 10%;
 }
 
-.logout > h1 > a {
+.logout>a {
   text-shadow: 0 0 5px var(--MediumRed);
+  text-decoration: none;
+  font-size: 170%;
 }

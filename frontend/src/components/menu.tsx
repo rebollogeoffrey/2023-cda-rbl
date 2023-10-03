@@ -13,20 +13,20 @@ function Menu() {
         <Logo />
         <div className="menu-items">
           {/* TODO : Add the link for the route */}
-          <h1>
-            <Link to="/statistics">Statistics</Link>
-          </h1>
-          <h1>
-            <Link to="/achievements">Achievements</Link>
-          </h1>
-          <h1>
-            <Link to="/account">Account</Link>
-          </h1>
+          <Link to="/statistics" className="statistics">
+            <h3>Statistics</h3>
+          </Link>
+          <Link to="/achievements" className="achievements">
+            <h3>Achievements</h3>
+          </Link>
+          <Link to="/account" className="account">
+            <h3>Account</h3>
+          </Link>
         </div>
         <div className="logout">
-          <h1>
-            <a>Log Out</a>
-          </h1>
+          <Link to="/">
+            <h3>Log Out</h3>
+          </Link>
         </div>
       </div>
     </div>
