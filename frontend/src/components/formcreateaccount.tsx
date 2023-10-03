@@ -27,6 +27,13 @@ function CreateAccountForm() {
           name="password"
           placeholder="Your password.."
         />
+        <label>Confirm Password</label>
+        <input
+          type="password"
+          id="confirm-password-create"
+          name="confirm-password"
+          placeholder="Confirm your password.."
+        />
 
         <input id="signup-button" type="submit" value="Sign Up" />
       </form>

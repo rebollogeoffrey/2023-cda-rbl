@@ -1,0 +1,32 @@
+.ach > h2 {
+  padding: 5% 0;
+}
+.ach-game {
+  margin: 0 5% 5% 5%;
+}
+
+.ach-game-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 2%;
+}
+
+@media only screen and (min-width: 1080px) {
+  .ach-game {
+    width: 30%;
+    margin: 0;
+  }
+  .ach {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .ach-container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    justify-content: center;
+  }
+}

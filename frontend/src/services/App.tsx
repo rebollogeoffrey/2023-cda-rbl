@@ -16,6 +16,10 @@ import AccountPage from "../pages/accountPage";
 function App() {
   const [modalMenu, setModalMenu] = useState(false);
 
+  {
+    /* TODO : Decomment when token in enable */
+  }
+
   // if (!token) {
   //   return <LoginPage />;
   // }
@@ -25,7 +29,7 @@ function App() {
       <NavBar />
       <Routes>
         <Route path="/" element={<LoginPage />} />
-        <Route path="/home" element={<HomePage />} />
+        <Route path="/hub" element={<HomePage />} />
         <Route path="/account" element={<AccountPage />} />
         <Route path="/statistics" element={<StatisticPage />} />
         <Route path="/achievements" element={<AchievementPage />} />

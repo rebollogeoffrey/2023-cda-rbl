@@ -1,3 +1,4 @@
+import Achievement from "../components/achievement";
 import Logo from "../components/logo";
 
 function AchievementPage() {
@@ -5,7 +6,7 @@ function AchievementPage() {
     <>
       <Logo />
       <main>
-        <h2>Achievements</h2>
+        <Achievement />
       </main>
     </>
   );
