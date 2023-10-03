@@ -35,11 +35,11 @@
   flex-direction: column;
 }
 
-.menu-items > h2,
-.logout > h2 {
+.menu-items > h1,
+.logout > h1 {
   padding: 10%;
 }
 
-.logout > h2 > a {
+.logout > h1 > a {
   text-shadow: 0 0 5px var(--MediumRed);
 }
