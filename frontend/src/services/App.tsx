@@ -1,25 +1,36 @@
+import { useState } from "react";
+import { Routes, Route } from "react-router-dom";
+
 import "../styles/App.css";
 import Footer from "../components/footer";
-import LoginPage from "../pages/loginPage";
-import { Routes, Route } from "react-router-dom";
-import ModifyPage from "../pages/modifyPage";
 import NavBar from "../components/navbar";
+
 import NavBarContext from "../contexts/NavbarContext";
-import { useState } from "react";
+
+import LoginPage from "../pages/loginPage";
+import HomePage from "../pages/homePage";
+import StatisticPage from "../pages/statisticPage";
+import AchievementPage from "../pages/achievementPage";
+import AccountPage from "../pages/accountPage";
 
 function App() {
   const [modalMenu, setModalMenu] = useState(false);
 
+  // if (!token) {
+  //   return <LoginPage />;
+  // }
+
   return (
     <NavBarContext.Provider value={{ modalMenu, setModalMenu }}>
       <NavBar />
-      {/* TODO : Replace Top Footer with the navbar */}
       <Routes>
         <Route path="/" element={<LoginPage />} />
-        <Route path="/home" element={<LoginPage />} />
-        <Route path="/account" element={<ModifyPage />} />
+        <Route path="/home" element={<HomePage />} />
+        <Route path="/account" element={<AccountPage />} />
+        <Route path="/statistics" element={<StatisticPage />} />
+        <Route path="/achievements" element={<AchievementPage />} />
         {/* TODO : add the correct route's element */}
-        <Route path="/tgpq" element={<ModifyPage />} />
+        <Route path="/tgpq" element={<HomePage />} />
       </Routes>
       <Footer />
     </NavBarContext.Provider>
