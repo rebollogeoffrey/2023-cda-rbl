@@ -34,8 +34,8 @@ input {
   padding: 2%;
   border: 1% solid;
   border-radius: 10px;
-  background-color: #d9d9d9;
-  color: black;
+  background-color: var(--NearWhite);
+  color: var(--DarkestOne);
 }
 
 input[type="submit"] {
@@ -47,12 +47,12 @@ input[type="submit"] {
 }
 
 #signin-button {
-  background-color: #491313;
+  background-color: var(--DarkRed);
 }
 
 #signup-button,
 #modify-button {
-  background-color: #013260;
+  background-color: var(--DarkBlue);
 }
 
 main {
@@ -63,6 +63,7 @@ main {
 @media only screen and (min-width: 1080px) {
   .form-container {
     width: 35%;
+    padding: 0%;
   }
 
   main {

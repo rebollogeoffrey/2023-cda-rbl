@@ -1,5 +1,5 @@
 import CreateAccountForm from "../components/formcreateaccount";
-import Login from "../components/login";
+import Login from "../components/formlogin";
 import Logo from "../components/logo";
 
 function LoginPage() {

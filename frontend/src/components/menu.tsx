@@ -2,6 +2,7 @@ import { useContext } from "react";
 import "../styles/menu.css";
 import Logo from "./logo";
 import NavBarContext from "../contexts/NavbarContext";
+import { Link } from "react-router-dom";
 
 function Menu() {
   const { modalMenu } = useContext(NavBarContext);
@@ -11,14 +12,15 @@ function Menu() {
       <div className="menu-container">
         <Logo />
         <div className="menu-items">
+          {/* TODO : Add the link for the route */}
           <h2>
-            <a>Statistics</a>
+            <Link to="/statistics">Statistics</Link>
           </h2>
           <h2>
-            <a>Achievements</a>
+            <Link to="/achievements">Achievements</Link>
           </h2>
           <h2>
-            <a>Account</a>
+            <Link to="/account">Account</Link>
           </h2>
         </div>
         <div className="logout">
