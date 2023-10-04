@@ -1,0 +1,8 @@
+.button-delete {
+  width: 50%;
+  background-color: var(--DarkRed);
+  border-radius: 10px;
+  padding: 3%;
+  font-size: larger;
+  margin: 5% auto;
+}
