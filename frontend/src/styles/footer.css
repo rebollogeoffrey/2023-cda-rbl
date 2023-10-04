@@ -1,0 +1,13 @@
+.footer-constructor {
+  position: sticky;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  background-color: var(--DarkestOne);
+  opacity: 50%;
+}
+
+.footer-constructor > p {
+  font-size: smaller;
+}
