@@ -3,39 +3,44 @@
   border: none;
   border-radius: 3px;
   z-index: 99;
-  width: 50px;
+  width: 15%;
+  min-width: 40px;
+  max-width: 80px;
   background-color: var(--DarkestOne);
-  padding: 0.4rem 0.1rem;
+  padding: 0.2rem 0.1rem;
   margin: 2% 0 0 2%;
 
   justify-content: space-around;
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
 }
 
 .bar1,
 .bar2,
 .bar3 {
-  background-color: white;
   width: 90%;
-  height: 5px;
+  height: auto;
   transition: 0.4s;
   border-radius: 3px;
   margin: auto;
 }
 
-/* Rotate first bar */
-.change .bar1 {
-  transform: translate(0, 11px) rotate(-45deg);
+.bar2 {
+  transform: rotate(180deg);
 }
 
-/* Fade out the second bar */
+/* ------ Transform on click ------ */
+/* Rotate first bar */
+.change .bar1 {
+  transform: translate(0, 120%) rotate(-45deg);
+}
+
+/* Get rid of the second bar */
 .change .bar2 {
-  opacity: 0;
+  transform: translate(-100vh, 0) rotate(180deg);
 }
 
 /* Rotate last bar */
 .change .bar3 {
-  transform: translate(0, -11px) rotate(45deg);
+  transform: translate(0, -110%) rotate(45deg);
 }

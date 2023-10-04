@@ -1,7 +1,7 @@
 import "../styles/statistic.css";
 
 function Statistic() {
-  // const gameStats = [
+  // const globalStat = [
   //   { nbWin: 2, nbLose: 1, game: "TGPQ" },
   //   { nbWin: 2, nbLose: 1, game: "Lootery" },
   //   { nbWin: 2, nbLose: 1, game: "Patata" },
@@ -9,7 +9,7 @@ function Statistic() {
   //   { nbWin: 2, nbLose: 1, game: "Pouet" },
   // ];
 
-  // const monsterKilledByGame = [
+  // const specificStat = [
   //   { nb_killed: 2, name: "WOLF", game: "TGPQ" },
   //   { nb_killed: 2, name: "GOLEM", game: "TGPQ" },
   // ];
