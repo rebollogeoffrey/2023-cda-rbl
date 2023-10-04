@@ -1,4 +1,5 @@
 import "../styles/form.css";
+import ButtonDelete from "./buttondelete";
 
 function ModifyAccountForm() {
   return (
@@ -36,6 +37,8 @@ function ModifyAccountForm() {
 
         <input id="modify-button" type="submit" value="Done" />
       </form>
+
+      <ButtonDelete />
     </div>
   );
 }
