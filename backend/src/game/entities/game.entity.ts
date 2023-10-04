@@ -49,20 +49,20 @@ export class Game {
   updated_at: Date;
 
   // --------------RELATIONS
-  @OneToMany(() => Character, (characters_id) => characters_id.game_id, {
+  @OneToMany(() => Character, (characters) => characters.game, {
     cascade: true,
   })
-  characters_id: string[];
+  characters: string[];
 
-  @OneToMany(() => Item, (items_id) => items_id.game_id, {
+  @OneToMany(() => Item, (items) => items.game, {
     cascade: true,
   })
-  items_id: string[];
+  items: string[];
 
-  @OneToMany(() => Achievement, (achievements_id) => achievements_id.game_id)
-  achievements_id: string[];
+  @OneToMany(() => Achievement, (achievements) => achievements.game)
+  achievements: string[];
 
   @OneToOne(() => Statistic)
   @JoinColumn()
-  statistic_id: string;
+  statistic: string;
 }

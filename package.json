@@ -5,7 +5,11 @@
     "@types/node": "^20.7.0",
     "@types/react": "^18.2.22",
     "@types/react-dom": "^18.2.7",
-    "dotenv": "^16.3.1",
-    "typescript": "^5.2.2"
+    "typescript": "^5.2.2",
+    "@nestjs/passport": "^10.0.2",
+    "dotenv": "^16.3.1"
+  },
+  "devDependencies": {
+    "@nestjs/config": "^3.1.1"
   }
 }

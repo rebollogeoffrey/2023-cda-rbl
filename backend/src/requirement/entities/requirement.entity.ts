@@ -8,7 +8,7 @@ import {
   ManyToOne,
 } from 'typeorm';
 import { Achievement } from '../../achievement/entities/achievement.entity';
-import { Category } from 'src/category/entities/category.entity';
+import { Category } from '../../category/entities/category.entity';
 
 @Entity()
 export class Requirement {
@@ -30,14 +30,6 @@ export class Requirement {
   })
   counter: number;
 
-  @Column({
-    type: 'varchar',
-    length: 80,
-    unique: false,
-    nullable: true,
-  })
-  category: string;
-
   // --------------TIMESTAMPS
   @CreateDateColumn({
     type: 'timestamp',
@@ -53,13 +45,9 @@ export class Requirement {
   updated_at: Date;
 
   // --------------RELATIONS
-  @OneToOne(
-    () => Achievement,
-    (achievement_id) => achievement_id.requirement_id,
-    { cascade: true },
-  )
-  achievement_id: string;
+  @OneToOne(() => Achievement, (achievement) => achievement.requirement)
+  achievement: string;
 
-  @ManyToOne(() => Category, (category_id) => category_id.requirements_id)
-  category_id: string;
+  @ManyToOne(() => Category, (category) => category.requirements)
+  category: string;
 }

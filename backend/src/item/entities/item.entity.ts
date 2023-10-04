@@ -7,7 +7,7 @@ import {
   UpdateDateColumn,
 } from 'typeorm';
 import { Game } from '../../game/entities/game.entity';
-import { Effect } from 'src/effect/entities/effect.entity';
+import { Effect } from '../../effect/entities/effect.entity';
 
 @Entity()
 export class Item {
@@ -36,14 +36,6 @@ export class Item {
     unique: false,
     nullable: true,
   })
-  effect: string;
-
-  @Column({
-    type: 'varchar',
-    length: 255,
-    unique: false,
-    nullable: true,
-  })
   url_image: string;
 
   // --------------TIMESTAMPS
@@ -61,13 +53,13 @@ export class Item {
   updated_at: Date;
 
   // --------------RELATIONS
-  @ManyToOne(() => Game, (game_id) => game_id.items_id, {
+  @ManyToOne(() => Game, (game) => game.items, {
     cascade: false,
   })
-  game_id: string;
+  game: string;
 
-  @ManyToOne(() => Effect, (effect_id) => effect_id.items_id)
-  effect_id: string;
+  @ManyToOne(() => Effect, (effect) => effect.items)
+  effect: string;
 
   // Relation ManyToMany with Character is in entity Character
 }

@@ -9,7 +9,7 @@ import {
   OneToMany,
 } from 'typeorm';
 import { Game } from '../../game/entities/game.entity';
-import { Historic } from 'src/historic/entities/historic.entity';
+import { Historic } from '../../historic/entities/historic.entity';
 
 @Entity()
 export class Statistic {
@@ -45,8 +45,8 @@ export class Statistic {
   // --------------RELATIONS
   @OneToOne(() => Game, { cascade: false })
   @JoinColumn()
-  game_id: string;
+  game: string;
 
-  @OneToMany(() => Historic, (historics_id) => historics_id.statistic_id)
-  historics_id: [string];
+  @OneToMany(() => Historic, (historics) => historics.statistic)
+  historics: [string];
 }

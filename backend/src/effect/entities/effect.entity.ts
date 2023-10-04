@@ -9,8 +9,8 @@ import {
   ManyToOne,
 } from 'typeorm';
 import { Achievement } from '../../achievement/entities/achievement.entity';
-import { Item } from 'src/item/entities/item.entity';
-import { Category } from 'src/category/entities/category.entity';
+import { Item } from '../../item/entities/item.entity';
+import { Category } from '../../category/entities/category.entity';
 
 export enum statistic_affected {
   GOLD = 'gold',
@@ -44,15 +44,6 @@ export class Effect {
   })
   value: number;
 
-  // TODO : Replace string by enum in when column
-  @Column({
-    type: 'varchar',
-    length: 50,
-    unique: false,
-    nullable: false,
-  })
-  when: string;
-
   // --------------TIMESTAMPS
   @CreateDateColumn({
     type: 'timestamp',
@@ -68,14 +59,14 @@ export class Effect {
   updated_at: Date;
 
   // --------------RELATIONS
-  @OneToOne(() => Achievement, (achievement_id) => achievement_id.effect_id, {
+  @OneToOne(() => Achievement, (achievement) => achievement.effect, {
     cascade: false,
   })
-  achievement_id: string;
+  achievement: string;
 
-  @OneToMany(() => Item, (items_id) => items_id.effect_id)
-  items_id: [string];
+  @OneToMany(() => Item, (items) => items.effect)
+  items: [string];
 
-  @ManyToOne(() => Category, (category_id) => category_id.effects_id)
-  category_id: string;
+  @ManyToOne(() => Category, (category) => category.effects)
+  category: string;
 }

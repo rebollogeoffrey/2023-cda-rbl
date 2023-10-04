@@ -14,8 +14,8 @@ import { User } from '../../user/entities/user.entity';
 
 @Entity()
 export class Achievement {
-  @PrimaryGeneratedColumn()
-  id: number;
+  @PrimaryGeneratedColumn('uuid')
+  id: string;
 
   @Column({
     type: 'varchar',
@@ -48,26 +48,24 @@ export class Achievement {
   is_owned: boolean;
 
   // --------------RELATIONS
-  @OneToOne(
-    () => Requirement,
-    (requirement_id) => requirement_id.achievement_id,
-    { cascade: true },
-  )
-  requirement_id: string;
-
-  @OneToOne(() => Effect, (effet_id) => effet_id.achievement_id, {
+  @OneToOne(() => Requirement, (requirement) => requirement.achievement, {
     cascade: true,
   })
-  effect_id: string;
+  requirement: string;
 
-  @ManyToOne(() => Game, (game_id) => game_id.achievements_id, {
+  @OneToOne(() => Effect, (effet) => effet.achievement, {
+    cascade: true,
+  })
+  effect: string;
+
+  @ManyToOne(() => Game, (game) => game.achievements, {
     cascade: false,
   })
-  game_id: string;
+  game: string;
 
   @ManyToMany(() => User, {
     cascade: false,
   })
   @JoinTable({ name: 'user_achievement' })
-  users_id: string[];
+  users: string[];
 }

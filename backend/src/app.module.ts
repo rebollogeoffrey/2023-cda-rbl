@@ -9,6 +9,9 @@ import { databaseConfig } from './config/database.config';
 // Actual Module
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
+
+// Other Modules
+import { AuthModule } from './auth/auth.module';
 import { UserModule } from './user/user.module';
 import { AchievementModule } from './achievement/achievement.module';
 import { GameModule } from './game/game.module';
@@ -19,7 +22,7 @@ import { EffectModule } from './effect/effect.module';
 import { RequirementModule } from './requirement/requirement.module';
 import { StatisticModule } from './statistic/statistic.module';
 import { CategoryModule } from './category/category.module';
-import { AuthModule } from './auth/auth.module';
+import { HistoricModule } from './historic/historic.module';
 
 @Module({
   imports: [
@@ -38,6 +41,7 @@ import { AuthModule } from './auth/auth.module';
     RequirementModule,
     StatisticModule,
     CategoryModule,
+    HistoricModule,
   ],
   controllers: [AppController],
   providers: [AppService],
