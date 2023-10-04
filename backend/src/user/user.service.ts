@@ -6,7 +6,7 @@ import { Repository } from 'typeorm';
 import { InjectRepository } from '@nestjs/typeorm';
 
 // Entity
-import { User } from '../entities/user.entity';
+import { User } from './entities/user.entity';
 
 @Injectable()
 export class UserService {
@@ -34,6 +34,6 @@ export class UserService {
   }
 
   deleteUser(user: User): void {
-    return this.usersRepository.delete(user) as unknown as void;
+    return this.usersRepository.delete(user.id) as unknown as void;
   }
 }

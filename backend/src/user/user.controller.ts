@@ -14,7 +14,7 @@ import {
 import { UserService } from './user.service';
 
 // Entity
-import { User } from '../entities/user.entity';
+import { User } from './entities/user.entity';
 
 // Guard
 import { AuthGuard } from '@nestjs/passport';
