@@ -2,11 +2,11 @@
 import { Injectable } from '@nestjs/common';
 
 // Entity
-import { User } from '../entities/user.entity';
+import { User } from '../user/entities/user.entity';
 
 // Other Service
 import { JwtService } from '@nestjs/jwt';
-import { UserService } from './../user/user.service';
+import { UserService } from '../user/user.service';
 
 // Misc
 import * as crypto from 'crypto';

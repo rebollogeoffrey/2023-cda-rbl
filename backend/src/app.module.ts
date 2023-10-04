@@ -23,12 +23,11 @@ import { AuthModule } from './auth/auth.module';
 
 @Module({
   imports: [
-    UserModule,
-    AuthModule,
     TypeOrmModule.forRootAsync({
       imports: [ConfigModule],
       useFactory: () => databaseConfig,
     }),
+    AuthModule,
     UserModule,
     AchievementModule,
     GameModule,

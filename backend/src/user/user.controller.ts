@@ -19,7 +19,7 @@ import { User } from './entities/user.entity';
 // Guard
 import { AuthGuard } from '@nestjs/passport';
 
-@Controller('user')
+@Controller('/user')
 export class UserController {
   constructor(private readonly userService: UserService) {}
 
