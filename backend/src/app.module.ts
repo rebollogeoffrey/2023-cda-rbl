@@ -1,7 +1,14 @@
+// Base
+import { TypeOrmModule } from '@nestjs/typeorm';
 import { Module } from '@nestjs/common';
+
+// Config
+import { ConfigModule } from '@nestjs/config';
+import { databaseConfig } from './config/database.config';
+
+// Actual Module
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-import { TypeOrmModule } from '@nestjs/typeorm';
 import { UserModule } from './user/user.module';
 import { AchievementModule } from './achievement/achievement.module';
 import { GameModule } from './game/game.module';
@@ -12,18 +19,15 @@ import { EffectModule } from './effect/effect.module';
 import { RequirementModule } from './requirement/requirement.module';
 import { StatisticModule } from './statistic/statistic.module';
 import { CategoryModule } from './category/category.module';
+import { AuthModule } from './auth/auth.module';
 
 @Module({
   imports: [
-    TypeOrmModule.forRoot({
-      type: 'mysql',
-      host: 'localhost',
-      port: 3306,
-      username: 'root',
-      password: 'root',
-      database: 'test',
-      entities: [],
-      synchronize: false,
+    UserModule,
+    AuthModule,
+    TypeOrmModule.forRootAsync({
+      imports: [ConfigModule],
+      useFactory: () => databaseConfig,
     }),
     UserModule,
     AchievementModule,

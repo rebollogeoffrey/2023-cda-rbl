@@ -1,26 +1,39 @@
+// Base
 import { Injectable } from '@nestjs/common';
-import { CreateUserDto } from './dto/create-user.dto';
-import { UpdateUserDto } from './dto/update-user.dto';
+
+// Repository
+import { Repository } from 'typeorm';
+import { InjectRepository } from '@nestjs/typeorm';
+
+// Entity
+import { User } from './entities/user.entity';
 
 @Injectable()
 export class UserService {
-  create(createUserDto: CreateUserDto) {
-    return 'This action adds a new user';
+  constructor(
+    @InjectRepository(User) private usersRepository: Repository<User>,
+  ) {}
+
+  async getUsers(): Promise<User[]> {
+    return await this.usersRepository.find();
   }
 
-  findAll() {
-    return `This action returns all user`;
+  async getUserById(id: string): Promise<User[]> {
+    return await this.usersRepository.find({
+      select: ['email', 'name'],
+      where: [{ id }],
+    });
   }
 
-  findOne(id: number) {
-    return `This action returns a #${id} user`;
+  async getUserByEmail(email: string): Promise<User | undefined> {
+    return this.usersRepository.findOneBy({ email: email });
   }
 
-  update(id: number, updateUserDto: UpdateUserDto) {
-    return `This action updates a #${id} user`;
+  saveUser(user: User): Promise<User> {
+    return this.usersRepository.save(user);
   }
 
-  remove(id: number) {
-    return `This action removes a #${id} user`;
+  deleteUser(user: User): void {
+    return this.usersRepository.delete(user.id) as unknown as void;
   }
 }
