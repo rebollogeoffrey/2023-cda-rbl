@@ -1,4 +1,4 @@
-export const valuespersonnage = [
+export const valuesPersonnage = [
   {
     id: 'ceaada48-7506-4cfb-a9b2-af71331e30fa',
     name: 'Wolf Cub',

@@ -8,7 +8,7 @@ import {
   CreateDateColumn,
   UpdateDateColumn,
 } from 'typeorm';
-import { Character } from '../../character/entities/character.entity';
+import { Personnage } from '../../personnage/entities/personnage.entity';
 import { Item } from '../../item/entities/item.entity';
 import { Achievement } from '../../achievement/entities/achievement.entity';
 import { Statistic } from '../../statistic/entities/statistic.entity';
@@ -49,10 +49,10 @@ export class Game {
   updated_at: Date;
 
   // --------------RELATIONS
-  @OneToMany(() => Character, (characters) => characters.game, {
+  @OneToMany(() => Personnage, (personnages) => personnages.game, {
     cascade: true,
   })
-  characters: string[];
+  personnages: string[];
 
   @OneToMany(() => Item, (items) => items.game, {
     cascade: true,

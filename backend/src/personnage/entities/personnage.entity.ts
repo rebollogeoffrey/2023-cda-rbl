@@ -3,17 +3,19 @@ import {
   Column,
   PrimaryGeneratedColumn,
   ManyToOne,
-  JoinColumn,
+  // JoinColumn,
   OneToOne,
   ManyToMany,
   JoinTable,
+  CreateDateColumn,
+  UpdateDateColumn,
 } from 'typeorm';
 import { Game } from '../../game/entities/game.entity';
 import { Monster } from '../../monster/entities/monster.entity';
 import { Item } from '../../item/entities/item.entity';
 
 @Entity()
-export class Character {
+export class Personnage {
   @PrimaryGeneratedColumn('uuid')
   id: string;
 
@@ -30,7 +32,7 @@ export class Character {
     unique: false,
     nullable: true,
   })
-  max_health: number;
+  health_max: number;
 
   @Column({
     type: 'int',
@@ -70,15 +72,28 @@ export class Character {
   })
   url_image: string;
 
+  // --------------TIMESTAMPS
+  @CreateDateColumn({
+    type: 'timestamp',
+    default: () => 'CURRENT_TIMESTAMP(6)',
+  })
+  created_at: Date;
+
+  @UpdateDateColumn({
+    type: 'timestamp',
+    default: () => 'CURRENT_TIMESTAMP(6)',
+    onUpdate: 'CURRENT_TIMESTAMP(6)',
+  })
+  updated_at: Date;
+
   // --------------RELATIONS
-  @ManyToOne(() => Game, (game) => game.characters, { cascade: false })
+  @ManyToOne(() => Game, (game) => game.personnages, { cascade: false })
   game: string;
 
   @OneToOne(() => Monster, { cascade: true })
-  @JoinColumn()
   monster: string;
 
-  // Hero is the join table between Item and Character
+  // Hero is the join table between Item and Personnage
   // Hero has no property by itself except it's id
   @ManyToMany(() => Item, { cascade: false })
   @JoinTable({ name: 'hero' })

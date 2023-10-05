@@ -15,7 +15,7 @@ import { AuthModule } from './auth/auth.module';
 import { UserModule } from './user/user.module';
 import { AchievementModule } from './achievement/achievement.module';
 import { GameModule } from './game/game.module';
-import { CharacterModule } from './character/character.module';
+import { PersonnageModule } from './personnage/personnage.module';
 import { MonsterModule } from './monster/monster.module';
 import { ItemModule } from './item/item.module';
 import { EffectModule } from './effect/effect.module';
@@ -34,7 +34,7 @@ import { HistoricModule } from './historic/historic.module';
     UserModule,
     AchievementModule,
     GameModule,
-    CharacterModule,
+    PersonnageModule,
     MonsterModule,
     ItemModule,
     EffectModule,

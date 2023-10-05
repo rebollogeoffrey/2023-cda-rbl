@@ -61,5 +61,5 @@ export class Item {
   @ManyToOne(() => Effect, (effect) => effect.items)
   effect: string;
 
-  // Relation ManyToMany with Character is in entity Character
+  // Relation ManyToMany with personnage is in entity personnage
 }

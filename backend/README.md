@@ -88,7 +88,7 @@ Theses routes are the route used in the backend to CRUD data.
 ## The Great Peasant's Quest
 
 - Main page : /tgpq
-- Character Selection : /tgpq/character
+- personnage Selection : /tgpq/personnage
 - Map : /tgpq/map
 - Battle : /tgpq/battle
 - Loading : /tgpq/loading

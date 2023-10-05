@@ -7,10 +7,10 @@ import { AchievementController } from './achievement.controller';
 import { AchievementService } from './achievement.service';
 
 // Entity
-import { Achievement } from './../entities/achievement.entity';
+import { Achievement } from './entities/achievement.entity';
 
 @Module({
-  imports: [AchievementService, TypeOrmModule.forFeature([Achievement])],
+  imports: [TypeOrmModule.forFeature([Achievement])],
   controllers: [AchievementController],
   providers: [AchievementService],
 })

@@ -8,7 +8,7 @@ import {
   UpdateDateColumn,
   ManyToOne,
 } from 'typeorm';
-import { Character } from '../../character/entities/character.entity';
+import { Personnage } from '../../personnage/entities/personnage.entity';
 import { Category } from '../../category/entities/category.entity';
 
 @Entity()
@@ -39,9 +39,9 @@ export class Monster {
   updated_at: Date;
 
   // --------------RELATIONS
-  @OneToOne(() => Character, { cascade: true })
+  @OneToOne(() => Personnage, { cascade: true })
   @JoinColumn()
-  character: string;
+  personnage: string;
 
   @ManyToOne(() => Category, (category) => category.monsters)
   category: string;
