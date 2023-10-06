@@ -11,7 +11,7 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 
 // Other Modules
-import { AuthModule } from './auth/auth.module';
+// import { AuthModule } from './auth/auth.module';
 import { UserModule } from './user/user.module';
 import { AchievementModule } from './achievement/achievement.module';
 import { GameModule } from './game/game.module';
@@ -30,7 +30,7 @@ import { HistoricModule } from './historic/historic.module';
       imports: [ConfigModule],
       useFactory: () => databaseConfig,
     }),
-    AuthModule,
+    // AuthModule,
     UserModule,
     AchievementModule,
     GameModule,

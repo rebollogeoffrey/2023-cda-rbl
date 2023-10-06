@@ -65,10 +65,7 @@ export class Category {
   @OneToMany(() => Effect, (effects) => effects.category)
   effects: [string];
 
-  @OneToMany(
-    () => Requirement,
-    (requirements) => requirements.category,
-  )
+  @OneToMany(() => Requirement, (requirements) => requirements.category)
   requirements: [string];
 
   @OneToMany(() => Historic, (historics) => historics.category)

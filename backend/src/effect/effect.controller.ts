@@ -1,7 +1,16 @@
-import { Controller, Get, Post, Body, Patch, Param, Delete } from '@nestjs/common';
+import {
+  Controller,
+  Get,
+  Post,
+  Body,
+  Patch,
+  Param,
+  Delete,
+} from '@nestjs/common';
 import { EffectService } from './effect.service';
 import { CreateEffectDto } from './dto/create-effect.dto';
 import { UpdateEffectDto } from './dto/update-effect.dto';
+import { Effect } from './entities/effect.entity';
 
 @Controller('effect')
 export class EffectController {
@@ -10,6 +19,12 @@ export class EffectController {
   @Post()
   create(@Body() createEffectDto: CreateEffectDto) {
     return this.effectService.create(createEffectDto);
+  }
+
+  @Post('all')
+  createAllData(@Body() createMockData: [Effect]) {
+    console.log('createMockData :>> ', createMockData);
+    return this.effectService.createMockData(createMockData);
   }
 
   @Get()
